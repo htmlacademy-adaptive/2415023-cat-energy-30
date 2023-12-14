@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>CAT ENERGY</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/index.js" defer></script>
+  </head>
+
+  <body class="page__body">
+    <header class="header">
+      <a class="link header__company-logo-link" href="index.html">
+        <img class="header__company-logo" src="images/..." width="33" height="38" alt="Логотип компании Cat Energy.">
+      </a>
+      <span class="company-name header__company-name"><span class="company-name__bold">Cat</span> Energy</span>
+      <nav class="main-navigation">
+        <button class="main-navigation__list-button main-navigation__list-button--open main-navigation__list-button--close" type="button"><span class="visually-hidden">Открывает/Закрывает навигацию</span></button>
+        <ul class="list main-navigation__list site-list">
+          <li class="site-list__item">
+            <a class="link site-list__link site-list__link--current" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="link site-list__link" href="#" aria-current="page">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="link site-list__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <h1 class="main-container__main-title visually-hidden">Cat Energy - Функциональное питание для котов</h1>
+
+      <section class="product-catalog">
+        <h2 class="product-catalog__title">Каталог продукции</h2>
+
+        <ul class="list product-catalog__list">
+          <li class="product-catalog__card">
+            <a class="link product-catalog__card-image-link" href="#">
+              <img class="product-catalog__card-image product-catalog__card-image--medium" src="images/..." width="84" height="100" alt="Оранжевая упаковка заварной еды Energy Pro со вкусом курицы.">
+            </a>
+            <a class="link product-catalog__card-title-link" href="#">
+              <h3 class="product-catalog__card-title">Cat Energy Pro 500 г</h3>
+            </a>
+            <ul class="product-catalog__card-properties">
+              <li class="product-catalog__card-properties-item product-catalog__card-properties-item--weigth">
+                <span class="product-catalog__card-properties-item-title">Масса</span>
+                <span class="product-catalog__card-properties-item-value">500 г</span>
+              </li>
+              <li class="product-catalog__card-properties-item product-catalog__card-properties-item--flavour">
+                <span class="product-catalog__card-properties-item-title">Вкус</span>
+                <span class="product-catalog__card-properties-item-value">Курица</span>
+              </li>
+              <li class="product-catalog__card-properties-item product-catalog__card-properties-item--price">
+                <span class="product-catalog__card-properties-item-title">Цена</span>
+                <span class="product-catalog__card-properties-item-value">1000 &#8381;</span>
+              </li>
+            </ul>
+            <a class="link-or-button product-catalog__card-button" href="#">Заказать</a>
+          </li>
+
+          <li class="product-catalog__card product-catalog__card--show-more">
+            <a class="link product-catalog__card-title-link" href="#">
+              <h3 class="product-catalog__card-title">Показать еще 100500 товаров</h3>
+            </a>
+            <span class="product-catalog__text">На самом деле вкусов гораздо больше!</span>
+            <a class="link-or-button product-catalog__card-button product-catalog__card-show-more-button" href="#">Заказать</a>
+          </li>
+          <li>
+
+          </li>
+        </ul>
+      </section>
+
+      <section class="additional-products">
+        <h2 class="additional-products__title">Дополнительные товары</h2>
+
+        <ul class="list additional-products__list">
+          <li class="additional-products__card">
+            <h3 class="additional-products__card-title">Сахарозаменитель</h3>
+            <ul class="additional-products__card-properties">
+              <li class="additional-products__item">
+                <span class="additional-products__item-title">1 упаковка (100 г)</span>
+                <span class="additional-products__item-price">200 &#8381;</span>
+              </li>
+            </ul>
+            <a class="link-or-button additional-products__card-button" href="#">Заказать</a>
+          </li>
+        </ul>
+
+        <div class="additional-products__promo">
+          <h3 class="additional-products__promo-title visually-hidden">Получите чехол в подарок!</h3>
+          <p class="additional-products__promo-text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__main-title visually-hidden">Адрес главного офиса</h2>
+        <div class="contacts__wrapper">
+          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <p class="contacts__adress">
+            <span class="contacts__adress-street">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</span>
+            <span class="contacts__adress-city">Санкт&#8209;Петербург</span>
+          </p>
+        </div>
+        <div class="contacts__map-wrapper">
+          <img class="contacts__map-image" src="images/..." width="320" height="362" alt="Карта Санкт-Петербурга с адресом главного офиса компании Cat energy.">
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <span class="company-name main-footer__company-name"><span class="company-name__bold">Cat</span> Energy</span>
+      <ul class="list main-footer__social-list social-list">
+        <li class="social-list__item social-list__item--vk">
+          <a class="social-list__link" href="#"><span class="visually-hidden">Мы в Вконтакте</span></a>
+        </li>
+        <li class="social-list__item social-list__item--yt">
+          <a class="social-list__link" href="#"><span class="visually-hidden">Мы на YouTube</span></a>
+        </li>
+        <li class="social-list__item social-list__item--tg">
+          <a class="social-list__link" href="#"><span class="visually-hidden">Мы в Телеграме</span></a>
+        </li>
+      </ul>
+      <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__name">HTML Academy</span>
+      </a>
+    </footer>
+
+  </body>
+</html>
