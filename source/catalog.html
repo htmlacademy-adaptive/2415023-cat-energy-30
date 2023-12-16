@@ -43,7 +43,10 @@
         <ul class="list product-catalog__list">
           <li class="product-catalog__card">
             <a class="link product-catalog__card-image-link" href="#">
-              <img class="product-catalog__card-image product-catalog__card-image--medium" src="images/..." width="84" height="100" alt="Оранжевая упаковка заварной еды Energy Pro со вкусом курицы.">
+              <picture>
+                <source width="161" height="172" type="image/png" media="(min-width: 768px)" srcset="images/catalog-images/energy-pro-chicken-500-tablet@1x.png 1x, images/catalog-images/energy-pro-chicken-500-tablet@2x.png 2x">
+                <img class="product-catalog__card-image product-catalog__card-image--small" src="images/catalog-images/energy-pro-chicken-500-mobile@1x.png" width="68" height="86" alt="Оранжевая упаковка заварной еды Energy Pro со вкусом курицы.">
+              </picture>
             </a>
             <a class="link product-catalog__card-title-link" href="#">
               <h3 class="product-catalog__card-title">Cat Energy Pro 500 г</h3>
@@ -52,6 +55,33 @@
               <li class="product-catalog__card-properties-item product-catalog__card-properties-item--weigth">
                 <span class="product-catalog__card-properties-item-title">Масса</span>
                 <span class="product-catalog__card-properties-item-value">500 г</span>
+              </li>
+              <li class="product-catalog__card-properties-item product-catalog__card-properties-item--flavour">
+                <span class="product-catalog__card-properties-item-title">Вкус</span>
+                <span class="product-catalog__card-properties-item-value">Курица</span>
+              </li>
+              <li class="product-catalog__card-properties-item product-catalog__card-properties-item--price">
+                <span class="product-catalog__card-properties-item-title">Цена</span>
+                <span class="product-catalog__card-properties-item-value">700 &#8381;</span>
+              </li>
+            </ul>
+            <a class="link-or-button product-catalog__card-button" href="#">Заказать</a>
+          </li>
+          <li class="product-catalog__card">
+            <a class="link product-catalog__card-image-link" href="#">
+              <picture>
+                <source width="168" height="206" type="image/png" media="(min-width: 1440px)" srcset="images/catalog-images/energy-pro-chicken-1000-desktop@1x.png 1x, images/catalog-images/energy-pro-chicken-1000-desktop@2x.png 2x">
+                <source width="168" height="206" type="image/png" media="(min-width: 768px)" srcset="images/catalog-images/energy-pro-chicken-1000-tablet@1x.png 1x, images/catalog-images/energy-pro-chicken-1000-tablet@2x.png 2x">
+                <img class="product-catalog__card-image product-catalog__card-image--medium" src="images/catalog-images/energy-pro-chicken-1000-mobile@1x.png" width="84" height="100" alt="Оранжевая упаковка заварной еды Energy Pro со вкусом курицы.">
+              </picture>
+            </a>
+            <a class="link product-catalog__card-title-link" href="#">
+              <h3 class="product-catalog__card-title">Cat Energy Pro 1000 г</h3>
+            </a>
+            <ul class="product-catalog__card-properties">
+              <li class="product-catalog__card-properties-item product-catalog__card-properties-item--weigth">
+                <span class="product-catalog__card-properties-item-title">Масса</span>
+                <span class="product-catalog__card-properties-item-value">1000 г</span>
               </li>
               <li class="product-catalog__card-properties-item product-catalog__card-properties-item--flavour">
                 <span class="product-catalog__card-properties-item-title">Вкус</span>
