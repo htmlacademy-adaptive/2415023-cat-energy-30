@@ -6,18 +6,26 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico"><!--32×32-->
-    <link rel="icon" href="/raw/images/favicons/favicon-32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/raw/images/favicons/apple-icon-180.png"><!--180×180-->
+    <link rel="icon" href="images/favicons/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple-icon-180.png"><!--180×180-->
     <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
 
   <body class="page__body">
     <header class="header">
-      <a class="link header__company-logo-link" href="index.html">
-        <img class="header__company-logo" src="images/..." width="33" height="38" alt="Логотип компании Cat Energy.">
-      </a>
-      <span class="company-name header__company-name"><span class="company-name__bold">Cat</span> Energy</span>
+      <div class="header__logo-wrapper">
+        <a class="link header__company-logo-link header__company-logo-link--image" href="index.html">
+          <picture>
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img class="header__company-logo" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
+          </picture>
+        </a>
+        <a class="link header__company-logo-link header__company-logo-link--text" href="index.html">
+            <img class="header__company-logo" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+        </a>
+      </div>
       <nav class="main-navigation">
         <button class="main-navigation__list-button main-navigation__list-button--open main-navigation__list-button--close" type="button"><span class="visually-hidden">Открывает/Закрывает навигацию</span></button>
         <ul class="list main-navigation__list site-list">
@@ -40,7 +48,7 @@
       <section class="program-selection">
         <h2 class="program-selection__title">Подбор программы <span class="visually-hidden">питания для кота Cat Energy</span></h2>
         <p class="program-selection__guidance">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="program-selection__fieldset program-selection__fieldset--patient-data">
             <legend class="program-selection__fieldset-legend visually-hidden">Данные кота</legend>
             <ul class="program-selection__fieldset-wrapper">
@@ -92,8 +100,9 @@
           </fieldset>
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--comment">
-              <legend class="program-selection__fieldset-legend">Комментарий</legend>
-            <textarea class="program-selection__comment" id="order-comment" name="comment" cols="40" rows="5">Расскажите обо всех повадках кота</textarea>
+            <legend class="program-selection__fieldset-legend">Комментарий</legend>
+            <label class="program-selection__fieldset-label">Расскажите обо всех повадках кота</label>
+            <textarea class="program-selection__comment" id="order-comment" name="comment" cols="40" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--supplements">
@@ -133,13 +142,17 @@
           </p>
         </div>
         <div class="contacts__map-wrapper">
-          <img class="contacts__map-image" src="images/..." width="320" height="362" alt="Карта Санкт-Петербурга с адресом главного офиса компании Cat energy.">
+          <picture>
+            <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x">
+            <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
+            <img class="contacts__map-image" src="images/map-mobile@1x.png" width="320" height="362" alt="Карта Санкт-Петербурга с адресом главного офиса компании Cat energy.">
+          </picture>
         </div>
       </section>
     </main>
 
     <footer class="main-footer">
-      <span class="company-name main-footer__company-name"><span class="company-name__bold">Cat</span> Energy</span>
+      <img class="main-footer__company-logo" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
       <ul class="list main-footer__social-list social-list">
         <li class="social-list__item social-list__item--vk">
           <a class="social-list__link" href="#"><span class="visually-hidden">Мы в Вконтакте</span></a>
