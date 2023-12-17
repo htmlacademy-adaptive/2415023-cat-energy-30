@@ -1,7 +1,38 @@
 /* GLOBAL */
 @import "./global/variables.scss";
-@import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/link.scss";
+@import "./global/link-or-button.scss";
+@import "./global/list.scss";
+// block-title
+
 
 /* BLOCKS */
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+@import "./blocks/main-navigation.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/social-list.scss";
+
+/* index */
+@import "./blocks/hero.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/product-operation.scss";
+@import "./blocks/operation-example.scss";
+@import "./blocks/contacts.scss";
+
+/* catalog */
+@import "./blocks/product-catalog.scss";
+@import "./blocks/additional-products.scss";
+
+/* form */
+@import "./blocks/program-selection.scss";
+@import "./blocks/input-list.scss";
+@import "./blocks/radio-list.scss";
+@import "./blocks/checkbox-list.scss";
+
+
+
