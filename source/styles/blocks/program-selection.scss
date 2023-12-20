@@ -3,11 +3,14 @@
 }
 
 .program-selection__title {
-
+  font-size: 60px;
+  line-height: 60px;
 }
 
-.program-selection__guidance {
-
+.program-selection__subtitle {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .program-selection__form {
@@ -15,26 +18,48 @@
 }
 
 .program-selection__fieldset {
-
+  color: $text-secondary-color;
+  font-family: $secondary-font-family;
+  font-size: 20px;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .program-selection__fieldset-legend {
-
+  color: $basic-black;
+  font-size: 36px;
+  line-height: 36px;
 }
 
 .program-selection__fieldset-wrapper {
 
 }
 
+.program-selection__obligatory-caption {
+  font-size: 16px;
+  line-height: 16px;
+}
+
 // textarea
 .program-selection__comment {
+  font-family: $secondary-font-family;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
 
+  &::placeholder {
+    font-family: $secondary-font-family;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
 }
 
 
 // кнопка формы
 .program-selection__button {
-
+  font-size: 20px;
+  line-height: 26px;
 }
 
 // модификаторы формы

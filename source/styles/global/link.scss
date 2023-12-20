@@ -1,6 +1,9 @@
 .link {
+  color: $basic-black;
   font-family: $secondary-font-family;
   text-transform: uppercase;
-  color: $basic-black;
+
+  border: none;
   text-decoration: none;
+  background-color: transparent;
 }

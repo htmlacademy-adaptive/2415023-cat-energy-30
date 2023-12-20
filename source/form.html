@@ -35,7 +35,7 @@
           <li class="main-navigation__list-item">
             <a class="link main-navigation__list-link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-navigation__list__item">
+          <li class="main-navigation__list-item">
             <a class="link main-navigation__list-link main-navigation__list-link--current" href="#" aria-current="page">Подбор программы</a>
           </li>
         </ul>
@@ -47,11 +47,11 @@
 
       <section class="program-selection">
         <h2 class="title program-selection__title">Подбор программы <span class="visually-hidden">питания для кота Cat Energy</span></h2>
-        <p class="program-selection__guidance">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="title program-selection__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="program-selection__fieldset program-selection__fieldset--patient-data">
             <legend class="program-selection__fieldset-legend visually-hidden">Данные кота</legend>
-            <ul class="program-selection__fieldset-wrapper input-list">
+            <ul class="list program-selection__fieldset-wrapper input-list">
               <li class="input-list__input input-list__input--patient-name">
                 <label class="input-list__input-label" for="cat-name">Имя:*</label>
                 <input class="input-list__input-field" id="cat-name" type="text" name="cat-name" placeholder="Как зовут котика?" value="Барсик" required autofocus>
@@ -69,7 +69,7 @@
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--goal">
             <legend class="program-selection__fieldset-legend visually-hidden">Цель изменения питания</legend>
-            <ul class="program-selection__fieldset-wrapper radio-list">
+            <ul class="list program-selection__fieldset-wrapper radio-list">
               <li class="program-selection__radio radio-list__item">
                 <input class="radio-list__button" type="radio" id="weight-loss" name="nutrition-goal" value="похудение" checked>
                 <label class="radio-list__button-description" for="weight-loss">Похудение</label>
@@ -87,7 +87,7 @@
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--owner-data">
               <legend class="program-selection__fieldset-legend">Контактные данные (владельца кота)</legend>
-            <ul class="program-selection__fieldset-wrapper input-list">
+            <ul class="list program-selection__fieldset-wrapper input-list">
               <li class="input-list__input input-list__input--owner-name">
                 <label class="input-list__input-label" for="e-mail">E-mail:*</label>
                 <input class="input-list__input-field" id="e-mail" type="email" name="e-mail" placeholder="Введите ваш емейл" value="kuklachev@gmail.com" required>
@@ -107,7 +107,7 @@
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--supplements">
             <legend class="program-selection__fieldset-legend">Дополнительно</legend>
-            <ul class="program-selection__fieldset-wrapper checkbox-list">
+            <ul class="list program-selection__fieldset-wrapper checkbox-list">
               <li class="checkbox-list__item">
                 <input class="checkbox-list__checkbox-cell" type="checkbox" id="sweetener" name="supplements" value="сахарозаменитель" checked>
                 <label class="checkbox-list__checkbox-description" for="sweetener">Cахарозаменитель</label>
@@ -128,7 +128,7 @@
           </fieldset>
 
           <button class="link button program-selection__button" type="submit">Отправить заявку</button>
-          <span class="program-selection__subtitle">*&nbsp;&mdash;&nbsp;Обязательные поля</span>
+          <span class="program-selection__obligatory-caption">*&nbsp;&mdash;&nbsp;Обязательные поля</span>
         </form>
       </section>
 

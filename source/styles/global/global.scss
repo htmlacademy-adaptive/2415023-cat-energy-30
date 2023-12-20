@@ -1,6 +1,6 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
 body {
-  font-family: "Lato", sans-serif;
+  font-family: $basic-font-family;
   font-size: $basic-font-size;
   font-style: normal;
   font-weight: 400;

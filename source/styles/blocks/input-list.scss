@@ -11,7 +11,11 @@
 }
 
 .input-list__input-field {
-
+  color: $text-secondary-color;
+  font-family: $secondary-font-family;
+  font-size: 20px;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 // данные кота
