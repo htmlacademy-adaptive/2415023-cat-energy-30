@@ -14,16 +14,16 @@
 
   <body class="page__body">
     <header class="header">
-      <div class="header__logo-wrapper">
+      <div class="header__logo-wrapper logo">
         <a class="link header__company-logo-link" href="index.html">
           <picture>
             <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
             <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-            <img class="header__company-logo header__company-logo--image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
+            <img class="header__company-logo-image logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
           </picture>
         </a>
         <a class="link header__company-logo-link" href="index.html">
-            <img class="header__company-logo header__company-logo--text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+            <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
         </a>
       </div>
       <nav class="main-navigation">
@@ -152,7 +152,9 @@
     </main>
 
     <footer class="main-footer">
-      <img class="main-footer__company-logo" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+      <div class="main-footer__logo-wrapper logo">
+        <img class="main-footer__logo logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+      </div>
       <ul class="list main-footer__social-list social-list">
         <li class="social-list__item social-list__item--vk">
           <a class="link social-list__link" href="#"><span class="visually-hidden">Мы в Вконтакте</span></a>

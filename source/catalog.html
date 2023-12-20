@@ -14,16 +14,16 @@
 
   <body class="page__body">
     <header class="header">
-      <div class="header__logo-wrapper">
+      <div class="header__logo-wrapper logo">
         <a class="link header__company-logo-link" href="index.html">
           <picture>
             <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
             <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-            <img class="header__company-logo header__company-logo--image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
+            <img class="header__company-logo-image logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
           </picture>
         </a>
         <a class="link header__company-logo-link" href="index.html">
-            <img class="header__company-logo header__company-logo--text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+            <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
         </a>
       </div>
       <nav class="main-navigation">
@@ -49,7 +49,7 @@
         <h2 class="title product-catalog__title">Каталог продукции</h2>
 
         <ul class="list product-catalog__list">
-          <li class="product-catalog__card">
+          <li class="product-catalog__card" id="products-pro">
             <a class="link product-catalog__card-image-link" href="#">
               <picture>
                 <source type="image/png" media="(min-width: 1440px)" srcset="images/catalog-images/desktop-energy-pro-chicken-500@1x.png 1x, images/catalog-images/desktop-energy-pro-chicken-500@2x.png 2x" width="169" height="210">
@@ -157,7 +157,7 @@
             </ul>
             <a class="link button product-catalog__card-button" href="#">Заказать</a>
           </li>
-          <li class="product-catalog__card">
+          <li class="product-catalog__card" id="products-slim">
             <a class="link product-catalog__card-image-link" href="#">
               <picture>
                 <source type="image/png" media="(min-width: 1440px)" srcset="images/catalog-images/desktop-energy-slim-buckwheat-500@1x.png 1x, images/catalog-images/desktop-energy-slim-buckwheat-500@2x.png 2x" width="169" height="210">
@@ -313,7 +313,9 @@
     </main>
 
     <footer class="main-footer">
-      <img class="main-footer__company-logo" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+      <div class="main-footer__logo-wrapper logo">
+        <img class="main-footer__logo logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+      </div>
       <ul class="list main-footer__social-list social-list">
         <li class="social-list__item social-list__item--vk">
           <a class="link social-list__link" href="#"><span class="visually-hidden">Мы в Вконтакте</span></a>
