@@ -5,9 +5,9 @@
     <title>CAT ENERGY</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicons/favicon-32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="images/favicons/apple-icon-180.png"><!-- 180×180 -->
+    <link rel="apple-touch-icon" href="images/favicons/apple-icon-180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
@@ -43,37 +43,41 @@
     </header>
 
     <main class="main-container">
-      <h1 class="main-container__main-title visually-hidden">Cat Energy - Функциональное питание для котов</h1>
+      <h1 class="title main-container__main-title visually-hidden">Cat Energy - Функциональное питание для котов</h1>
 
       <section class="hero">
-        <h2 class="hero__title">Функциональное питание для котов</h2>
-        <span class="hero__subtitle">Занялся собой? Займись котом!</span>
+        <h2 class="title hero__title">Функциональное питание для котов</h2>
+        <h3 class="title hero__subtitle">Занялся собой? Займись котом!</h3>
         <picture>
           <source width="559" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero-can-desktop@1x.png 1x, images/hero-can-desktop@2x.png 2x">
           <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero-can-tablet@1x.png 1x, images/hero-can-tablet@2x.png 2x">
           <img class="hero__image" src="images/hero-can-mobile@1x.png" srcset="images/hero-can-mobile@2x.png 2x" width="280" height="270" alt="Высокий стаканчик оранжевого цвета - заварная еда для кота со вкусом курицы.">
         </picture>
-        <a class="link-or-button hero__link" href="#">Подобрать программу</a>
+        <a class="link button hero__button" href="#">Подобрать программу</a>
       </section>
 
       <section class="programs">
-        <h2 class="programs__title visually-hidden">Программы питания</h2>
+        <h2 class="title visually-hidden">Программы питания</h2>
         <ul class="list programs__list">
           <li class="programs__item programs__item--slim">
-            <h3 class="programs__program-title">Похудение</h3>
-            <p class="programs__program-descriptoin">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="link programs__program-link" href="#">Каталог slim</a>
+            <a class="link programs__program-title-link" href="#">
+              <h3 class="title programs__program-title">Похудение</h3>
+            </a>
+            <p class="programs__program-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="link programs__program-button" href="#">Каталог slim</a>
           </li>
           <li class="programs__item programs__item--pro">
-            <h3 class="programs__program-title">Набор массы</h3>
-            <p class="programs__program-descriptoin">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="link programs__program-link" href="#">Каталог pro</a>
+            <a class="link programs__program-title-link" href="#">
+              <h3 class="title programs__program-title">Набор массы</h3>
+            </a>
+            <p class="programs__program-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="link programs__program-button" href="#">Каталог pro</a>
           </li>
         </ul>
       </section>
 
       <section class="product-operation">
-        <h2 class="block-title product-operation__title">Как это работает</h2>
+        <h2 class="title product-operation__title">Как это работает</h2>
         <ul class="list product-operation__list">
           <li class="product-operation__item product-operation__item--useful">Функциональное питание содержит только полезные питательные вещества.</li>
           <li class="product-operation__item product-operation__item--form">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
@@ -83,7 +87,7 @@
       </section>
 
       <section class="operation-example">
-        <h2 class="block-title operation-example__title">Живой пример</h2>
+        <h2 class="title operation-example__title">Живой пример</h2>
         <p class="operation-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <ul class="list operation-example__list">
           <li class="operation-example__item operation-example__item--weight">
@@ -92,7 +96,7 @@
           </li>
           <li class="operation-example__item operation-example__item--time">
             <span class="operation-example__item-number">60 дней</span>
-            <span class="operation-example__item-number-subtitle">затрачено времени</span>
+            <span class="operation-example__item-number-subtitle">Затрачено времени</span>
           </li>
           <li class="operation-example__item operation-example__item--total">
             <span class="operation-example__item-total operation-example__item-total--title">Затраты на питание:</span>
@@ -113,9 +117,9 @@
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__main-title visually-hidden">Адрес главного офиса</h2>
+        <h2 class="title contacts__main-title visually-hidden">Адрес главного офиса</h2>
         <div class="contacts__wrapper">
-          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <h3 class="title contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
           <p class="contacts__adress">
             <span class="contacts__adress-street">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8</span>
             <span class="contacts__adress-city">Санкт&#8209;Петербург</span>

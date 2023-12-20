@@ -37,12 +37,17 @@
 }
 
 .product-catalog__card-title {
-
+  color: $text-secondary-darker-color;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 // описание карточки
 .product-catalog__card-properties {
-
+  color: $text-secondary-color;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .product-catalog__card-properties-item {
@@ -71,7 +76,8 @@
 
 // кнопка карточки
 .product-catalog__card-button {
-
+  font-size: 16px;
+  line-height: 20px;
 }
 
 // карточка "покажи еще"
@@ -79,6 +85,16 @@
 
 }
 
-.product-catalog__card-show-more-button {
+.product-catalog__card-show-more-text {
+  color: $text-secondary-color;
+  font-size: 12px;
+  line-height: 16px;
+}
 
+.product-catalog__card-show-more-button {
+  color: $text-secondary-color;
+  font-size: 16px;
+  line-height: 20px;
+
+  background-color: #F2F2F2;  /*придумать переменную цвету*/
 }

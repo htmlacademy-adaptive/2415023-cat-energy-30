@@ -3,11 +3,12 @@
 }
 
 .additional-products__title {
-
+  font-size: 24px;
+  line-height: 24px;
 }
 
 //Список дополнительных продуктов
-.list additional-products__list {
+.additional-products__list {
 
 }
 
@@ -15,35 +16,38 @@
 
 }
 
+//карточка продукта
 .additional-products__card-title {
-
+  color: $text-secondary-darker-color;
+  font-family: $secondary-font-family;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 
 .additional-products__card-properties {
+  color: var(--special_dark-grey, #444);
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.additional-products__card-properties-title {
 
 }
 
-//карточка продукта
-.additional-products__item {
-
-}
-
-.additional-products__item-title {
-
-}
-
-.additional-products__item-price {
+.additional-products__card-properties-price {
 
 }
 
 // кнопка продукта
 .additional-products__card-button {
-
+  font-size: 16px;
+  line-height: 20px;
 }
 
 // промо-блок с подарками
 .additional-products__promo {
-
+  background-color: $company-primary-color;
 }
 
 .additional-products__promo-title {
@@ -51,5 +55,7 @@
 }
 
 .additional-products__promo-text {
-
+  color: $basic-white;
+  font-size: 16px;
+  line-height: 20px;
 }

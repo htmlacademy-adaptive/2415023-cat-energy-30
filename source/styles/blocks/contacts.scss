@@ -11,11 +11,15 @@
 }
 
 .contacts__title {
-
+  font-family: $secondary-font-family;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 .contacts__adress {
-
+  color: $text-secondary-color;
+  line-height: 20px;
 }
 
 //Карта
