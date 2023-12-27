@@ -22,13 +22,19 @@
 
 //Кнопка
 .main-navigation__list-button {
+  width: 24px;
+  height: 38px;
 
+  background-color: $basic-black;
+  mask: var(--form-button) no-repeat center;
 }
 
 .main-navigation__list-button--open {
-
+  --form-button: url("../../images/icons/stack.svg#icon-menu-burger");
+  mask-size: 24px 16px;
 }
 
 .main-navigation__list-button--close {
-
+  --form-button: url("../../images/icons/stack.svg#icon-form-cross");
+  mask-size: 18px 18px;
 }

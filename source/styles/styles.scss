@@ -3,13 +3,15 @@
 @import "./global/mixins.scss";
 @import "./global/fonts.scss";
 @import "./global/global.scss";
-@import "./global/visually-hidden.scss";
-@import "./global/title.scss";
-@import "./global/link.scss";
-@import "./global/button.scss";
-@import "./global/list.scss";
 
 /* BLOCKS */
+/* общие блоки */
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/title.scss";
+@import "./blocks/link.scss";
+@import "./blocks/button.scss";
+@import "./blocks/list.scss";
+
 // @import "./blocks/page.scss";
 @import "./blocks/header.scss";
 @import "./blocks/main-navigation.scss";
@@ -34,4 +36,5 @@
 // @import "./blocks/radio-list.scss";
 // @import "./blocks/checkbox-list.scss";
 
-/* коммент доделать каталог */
+/* коммент -заметка что еще нужно сделать:
+1)  */
