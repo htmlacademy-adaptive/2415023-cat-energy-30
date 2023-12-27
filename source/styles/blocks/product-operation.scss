@@ -12,20 +12,31 @@
 
 .product-operation__item {
   color: $text-secondary-color;
+
+  &::before {
+    content: " ";
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background: $company-primary-color var(--background-item) no-repeat 50% 50%;
+    background-size: 25px 30px;
+  }
 }
 
 .product-operation__item--useful {
-
+  --background-item: url("../../images/icons/stack.svg#icon-leaf");
 }
 
 .product-operation__item--form {
-
+  --background-item: url("../../images/icons/stack.svg#icon-bubles");
 }
 
 .product-operation__item--ration {
-
+  --background-item: url("../../images/icons/stack.svg#icon-cutlery");
 }
 
 .product-operation__item--changes {
-
+  --background-item: url("../../images/icons/stack.svg#icon-clock");
 }
