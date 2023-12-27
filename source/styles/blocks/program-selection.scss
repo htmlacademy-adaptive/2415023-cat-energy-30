@@ -18,6 +18,8 @@
 }
 
 .program-selection__fieldset {
+  border: none;
+
   color: $text-secondary-color;
   font-family: $secondary-font-family;
   font-size: 20px;
@@ -26,9 +28,12 @@
 }
 
 .program-selection__fieldset-legend {
+  padding: 0;
+
   color: $basic-black;
   font-size: 36px;
   line-height: 36px;
+  text-transform: none;
 }
 
 .program-selection__fieldset-wrapper {
