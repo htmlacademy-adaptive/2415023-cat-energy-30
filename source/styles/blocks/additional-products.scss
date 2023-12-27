@@ -16,10 +16,21 @@
 
 }
 
-.additional-products__card--sweetener {}
-.additional-products__card--drinking-water {}
-.additional-products__card--milk {}
-.additional-products__card--vitamins {}
+.additional-products__card--sweetener {
+
+}
+
+.additional-products__card--drinking-water {
+
+}
+
+.additional-products__card--milk {
+
+}
+
+.additional-products__card--vitamins {
+
+}
 
 //карточка продукта
 .additional-products__card-title {
@@ -31,7 +42,7 @@
 }
 
 .additional-products__card-properties {
-  color: var(--special_dark-grey, #444);
+  color: $text-secondary-color;
   font-size: 14px;
   line-height: 14px;
 }
