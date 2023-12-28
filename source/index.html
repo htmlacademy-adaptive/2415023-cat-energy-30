@@ -15,21 +15,19 @@
   <body class="page__body">
 
     <header class="header">
-      <div class="header__logo-wrapper logo">
-        <a class="link header__company-logo-link" href="index.html" aria-current="page">
-          <picture>
-            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
-            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-            <img class="header__company-logo-image logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
-          </picture>
-          </a>
-        <a class="link header__company-logo-link" href="index.html" aria-current="page">
-            <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+      <a class="link header__company-logo-link" href="index.html" aria-current="page">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img class="header__company-logo-image logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
+        </picture>
         </a>
-      </div>
-      <nav class="main-navigation">
+      <a class="link header__company-logo-link" href="index.html" aria-current="page">
+          <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+      </a>
+      <nav class="header__navigation main-navigation">
         <button class="button main-navigation__list-button main-navigation__list-button--open" type="button"><span class="visually-hidden">Открывает/Закрывает навигацию</span></button>
-        <ul class="list main-navigation__list">
+        <ul class="list main-navigation__list main-navigation__list--open">
           <li class="main-navigation__list-item">
             <a class="link main-navigation__list-link main-navigation__list-link--current" href="#" aria-current="page">Главная</a>
           </li>
@@ -47,9 +45,11 @@
       <h1 class="title main-container__main-title visually-hidden">Cat Energy - Функциональное питание для котов</h1>
 
       <section class="hero">
-        <h2 class="title hero__title">Функциональное питание для котов</h2>
-        <p class="title hero__subtitle">Занялся собой? Займись котом!</p>
-        <picture>
+        <div class="hero__title-container">
+          <h2 class="title hero__title">Функциональное<br>питание для котов</h2>
+          <p class="title hero__subtitle">Занялся собой? Займись котом!</p>
+        </div>
+        <picture class="hero__image-container">
           <source width="559" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero-can-desktop@1x.png 1x, images/hero-can-desktop@2x.png 2x">
           <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero-can-tablet@1x.png 1x, images/hero-can-tablet@2x.png 2x">
           <img class="hero__image" src="images/hero-can-mobile@1x.png" srcset="images/hero-can-mobile@2x.png 2x" width="280" height="270" alt="Высокий стаканчик оранжевого цвета - заварная еда для кота со вкусом курицы.">
@@ -80,10 +80,10 @@
       <section class="product-operation">
         <h2 class="title product-operation__title">Как это работает</h2>
         <ul class="list product-operation__list">
-          <li class="product-operation__item product-operation__item--useful">Функциональное питание содержит только полезные питательные вещества.</li>
-          <li class="product-operation__item product-operation__item--form">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-          <li class="product-operation__item product-operation__item--ration">Замените один-два приема обычной еды на наше функциональное питание.</li>
-          <li class="product-operation__item product-operation__item--changes">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+          <li class="product-operation__item product-operation__item--useful"><span class="product-operation__item-text">Функциональное питание содержит только полезные питательные вещества.</span></li>
+          <li class="product-operation__item product-operation__item--form"><span class="product-operation__item-text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span></li>
+          <li class="product-operation__item product-operation__item--ration"><span class="product-operation__item-text">Замените один-два приема обычной еды на наше функциональное питание.</span></li>
+          <li class="product-operation__item product-operation__item--changes"><span class="product-operation__item-text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</span></li>
         </ul>
       </section>
 

@@ -1,20 +1,31 @@
 .header {
+  padding: $mobile-container-padding;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header__logo-wrapper {
+@media (min-width: $tablet-width) {
+  .header {
+    padding: $tablet-container-padding;
+    padding-top: 25px;
+  }
 
+  .header__company-logo-text {
+    margin-left: 13px;
+  }
 }
 
-.header__company-logo-link {
+@media (min-width: $desktop-width) {
+  .header {
+    padding: $desktop-container-padding;
+    padding-top: 55px;
+  }
 
-}
-
-
-.header__company-logo-image {
-
-}
-
-.header__company-logo-text {
-
+  .header__company-logo-text {
+    margin-left: 14px;
+  }
 }

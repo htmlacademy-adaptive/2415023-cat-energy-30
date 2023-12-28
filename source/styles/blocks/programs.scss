@@ -1,13 +1,18 @@
 .programs {
-
+  padding: $mobile-container-padding;
 }
 
 .programs__list {
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .programs__item {
+  display: block;
+  width: 100%;
 
+  background-color: $basic-grey;
 }
 
 .programs__item--slim {
@@ -18,10 +23,6 @@
 .programs__item--pro {
   --background-item: url("../../images/icons/stack.svg#programs-pro");
   --background-item-size: 67px 28px;
-}
-
-.programs__program-title-link {
-
 }
 
 .programs__program-title {
@@ -75,5 +76,29 @@
 
     background-color: $basic-black;
     mask: url("../../images/icons/stack.svg#icon-arrow") no-repeat center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs {
+    padding: $tablet-container-padding;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    padding: $desktop-container-padding;
+  }
+
+  .programs__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+
+    justify-content: center;
+  }
+
+  .programs__item {
+    max-width: 570px;
   }
 }

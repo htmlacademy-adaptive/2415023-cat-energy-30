@@ -1,12 +1,27 @@
 /* здесь используйте глобальные переменные */
+/* screen variables */
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+
+/* distances */
+$mobile-container-padding: 0 20px;
+$tablet-container-padding: 0 30px;
+$desktop-container-padding: 0 110px;
+
+/* fonts */
 $basic-font-size: 14px;
 $basic-line-height: 18px;
 
 $basic-font-family: "Lato", "Arial", sans-serif;
 $secondary-font-family: "Oswald", "Lucida Sans Unicode", sans-serif;
 
+/* colors */
 $basic-white: #ffffff;
+$basic-grey: #f2f2f2;
 $basic-black: #000000;
 $text-secondary-darker-color: #222222;
 $text-secondary-color: #444444;
 $company-primary-color: #68b738;
+
+

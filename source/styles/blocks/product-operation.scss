@@ -7,18 +7,24 @@
 }
 
 .product-operation__list {
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .product-operation__item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+
   color: $text-secondary-color;
 
   &::before {
     content: " ";
 
     display: block;
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
 
     background: $company-primary-color var(--background-item) no-repeat 50% 50%;
     background-size: 25px 30px;
@@ -39,4 +45,8 @@
 
 .product-operation__item--changes {
   --background-item: url("../../images/icons/stack.svg#icon-clock");
+}
+
+.product-operation__item-text {
+  margin-top: 3px;
 }

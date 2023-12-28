@@ -1,14 +1,22 @@
 .main-navigation {
-
+  display: flex;
 }
 
 //список
 .main-navigation__list {
-
+  position: relative;
 }
 
-.main-navigation__list-item {
+.main-navigation__list--opened {
+  position: absolute;
+  left: 0;
 
+  width: 100%;
+}
+
+.main-navigation__list--closed {
+  position: absolute;
+  transform: scale(0);
 }
 
 .main-navigation__list-link {
@@ -16,14 +24,12 @@
   line-height: 20px;
 }
 
-.main-navigation__list-link--current {
-
-}
 
 //Кнопка
 .main-navigation__list-button {
   width: 24px;
   height: 38px;
+  padding: 0;
 
   background-color: $basic-black;
   mask: var(--form-button) no-repeat center;
@@ -37,4 +43,43 @@
 .main-navigation__list-button--close {
   --form-button: url("../../images/icons/stack.svg#icon-form-cross");
   mask-size: 18px 18px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .main-navigation {
+    margin-left: auto;
+  }
+
+  .main-navigation__list {
+    display: flex;
+    gap: 33px;
+  }
+
+  .main-navigation__list--opened {
+    position: relative;
+  }
+
+  .main-navigation__list-link {
+    padding-bottom: 8px;
+  }
+
+  .main-navigation__list-link--current {
+    border-bottom: 2px solid $company-primary-color;
+  }
+
+  .main-navigation__list-button {
+    display: none;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .main-navigation__list-link {
+    color: $basic-white;
+  }
+
+  .main-navigation__list-link--current {
+    border-bottom: 2px solid $basic-white;
+  }
 }
