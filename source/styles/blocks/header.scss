@@ -4,14 +4,32 @@
   padding-bottom: 12px;
 
   display: flex;
+  align-items: center;
+}
+
+.header__company-logo-link {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 0 0 66%;
+}
+
+.header__company-logo-text {
+  justify-self: end;
+}
+
+.header__navigation {
+  margin-left: auto;
 }
 
 @media (min-width: $tablet-width) {
   .header {
     padding: $tablet-container-padding;
     padding-top: 25px;
+  }
+
+  .header__company-logo-link {
+    flex: initial;
   }
 
   .header__company-logo-text {
