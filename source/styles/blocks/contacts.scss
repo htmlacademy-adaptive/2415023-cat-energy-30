@@ -1,13 +1,14 @@
 .contacts {
-
-}
-
-.contacts__main-title {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contacts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
+  padding: 26px 0;
 }
 
 .contacts__title {
@@ -15,18 +16,26 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  margin: 0;
 }
 
 .contacts__adress {
   color: $text-secondary-color;
   line-height: 20px;
+
+  margin: 0;
 }
 
 //Карта
+.contacts-map {
+  align-self: center;
+}
+
 .contacts__map-wrapper {
 
 }
 
 .contacts__map-image {
-
+  display: block;
 }

@@ -3,27 +3,34 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  padding-top: 27px;
 
   color: $basic-white;
   text-align: center;
 
   &::before {
-    content: "";
+    @include pseudo-element;
     position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
     z-index: -1;
-    width: 100%;
+
+    width: 100vh;
+    height: auto;
     min-height: 302px;
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url(../../images/hero-background-mobile@1x.webp);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 320px 302px;
+    background-position: center;
   }
 }
 
 .hero__title {
   margin: 0;
   margin-bottom: 25px;
-  padding-top: 27px;
 }
 
 .hero__subtitle {
@@ -36,8 +43,6 @@
 }
 
 .hero__button {
-  margin: $mobile-container-padding;
-
   font-size: 16px;
   line-height: 20px;
 }
@@ -45,7 +50,7 @@
 @media (min-width: $tablet-width) {
   .hero {
     position: static;
-    padding: 65px 30px 0 120px;
+    padding: 0 30px 0 90px;
 
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -98,13 +103,15 @@
     grid-template-rows: auto 1fr;
 
     &::before {
-      content: "";
+      @include pseudo-element;
       position: absolute;
       z-index: -1;
       width: 50%;
       min-height: 695px;
       top: 0;
       right: 0;
+      transform: translateX(0);
+
 
       background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url(../../images/hero-background-desktop@1x.webp);
       background-repeat: no-repeat;

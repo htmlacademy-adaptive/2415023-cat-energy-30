@@ -1,7 +1,19 @@
-.page {
+.page__body {
+  max-width: 280px;
+  margin: 0 auto;
 
+  outline: 1px solid blue;
 }
 
-.page__body {
-  margin: 0;
+@media (min-width: $tablet-width) {
+  .page__body {
+    max-width: 768px;
+    outline: 3px solid blue;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__body {
+    max-width: 1440px;
+  }
 }

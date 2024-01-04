@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  padding: $mobile-container-padding;
+  // padding: $mobile-container-padding;
   margin-bottom: 20px;
 }
 
@@ -24,8 +24,8 @@
   background-color: $basic-grey;
 
   &::before {
-    content: " ";
-    display: block;
+    @include pseudo-element;
+
     width: 50px;
     height: 50px;
     margin: 10px;
@@ -38,8 +38,8 @@
   }
 
   &::after {
-    content: " ";
-    display: block;
+    @include pseudo-element;
+
     width: 70px;
     height: 70px;
 
@@ -81,8 +81,8 @@
 
   color: $text-secondary-color;
   &::after {
-    content: "";
-    display: block;
+    @include pseudo-element;
+
     width: 100%;
     height: 2px;
     margin-top: 20px;
@@ -103,9 +103,8 @@
   line-height: 16px;
 
   &::after {
-    content: " ";
+    @include pseudo-element;
 
-    display: block;
     width: 32px;
     height: 10px;
 
@@ -116,7 +115,7 @@
 
 @media (min-width: $tablet-width) {
   .programs {
-    padding: $tablet-container-padding;
+    // padding: $tablet-container-padding;
     margin-bottom: 45px;
   }
 
@@ -130,7 +129,7 @@
 
 @media (min-width: $desktop-width) {
   .programs {
-    padding: $desktop-container-padding;
+    // padding: $desktop-container-padding;
     margin-bottom: 70px;
   }
 

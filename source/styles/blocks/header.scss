@@ -1,5 +1,5 @@
 .header {
-  padding: $mobile-container-padding;
+  // padding: $mobile-container-padding;
   padding-top: 12px;
   padding-bottom: 12px;
 
@@ -24,8 +24,9 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    padding: $tablet-container-padding;
+    // padding: $tablet-container-padding;
     padding-top: 25px;
+    padding-bottom: 65px;
   }
 
   .header__company-logo-link {
@@ -39,7 +40,7 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    padding: $desktop-container-padding;
+    // padding: $desktop-container-padding;
     padding-top: 55px;
   }
 

@@ -1,11 +1,15 @@
 .product-operation {
   display: flex;
   flex-direction: column;
-  padding: $mobile-container-padding;
+
+  margin-bottom: 50px;
+  // padding: $mobile-container-padding;
 }
 
 .product-operation__title {
   line-height: 40px;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .product-operation__list {
@@ -22,9 +26,8 @@
   color: $text-secondary-color;
 
   &::before {
-    content: " ";
+    @include pseudo-element;
 
-    display: block;
     min-width: 60px;
     min-height: 60px;
 
@@ -55,7 +58,7 @@
 
 @media (min-width: $tablet-width) {
   .product-operation {
-    padding: $tablet-container-padding;
+    // padding: $tablet-container-padding;
   }
 
   .product-operation__list {
@@ -106,6 +109,6 @@
 
 @media (min-width: $desktop-width) {
   .product-operation {
-    padding: $desktop-container-padding;
+    // padding: $desktop-container-padding;
   }
 }

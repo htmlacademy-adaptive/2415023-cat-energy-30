@@ -7,3 +7,25 @@
     font-display: swap;
   }
 }
+
+@mixin pseudo-element {
+  content: "";
+  display: block;
+}
+
+@mixin background-overlay($color) {
+  &::after {
+    @include pseudo-element;
+    position: absolute;
+    top: 0;
+    width: 100vh;
+    height: 100%;
+    z-index: -1;
+
+    background-color: $color;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
+}
