@@ -1,6 +1,6 @@
 .main-navigation__list {
   display: flex;
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   text-align: center;
 
@@ -34,29 +34,6 @@
   line-height: 20px;
 }
 
-
-//Кнопка
-.main-navigation__list-button {
-  width: 24px;
-  height: 38px;
-  padding: 0;
-  margin-left: auto;
-
-  background-color: $basic-black;
-  mask: var(--form-button) no-repeat center;
-}
-
-.main-navigation__list-button--mobile-opened {
-  --form-button: url("../../images/icons/stack.svg#icon-form-cross");
-  mask-size: 18px 18px;
-}
-
-.main-navigation__list-button--mobile-closed {
-  --form-button: url("../../images/icons/stack.svg#icon-menu-burger");
-  mask-size: 24px 16px;
-}
-
-
 @media (min-width: $tablet-width) {
   .main-navigation__list {
     position: static;
@@ -89,10 +66,6 @@
 
   .main-navigation__list-link--current {
     border-bottom: 2px solid $company-primary-color;
-  }
-
-  .main-navigation__list-button {
-    display: none;
   }
 }
 
