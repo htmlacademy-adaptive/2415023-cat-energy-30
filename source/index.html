@@ -23,16 +23,16 @@
         </picture>
         <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
       </a>
+      <button class="button main-navigation__list-button main-navigation__list-button--mobile-opened" type="button"><span class="visually-hidden">Открывает/Закрывает навигацию</span></button>
       <nav class="header__navigation main-navigation">
-        <button class="button main-navigation__list-button main-navigation__list-button--closed" type="button"><span class="visually-hidden">Открывает/Закрывает навигацию</span></button>
-        <ul class="list main-navigation__list main-navigation__list--open"> <!-- --closed - для закрытой навигации -->
-          <li class="main-navigation__list-item">
+        <ul class="list main-navigation__list main-navigation__list--opened"> <!-- --opened/closed - для открытой/закрытой навигации -->
+          <li class="main-navigation__list-item main-navigation__list-item--mobile">
             <a class="link main-navigation__list-link main-navigation__list-link--current" href="#" aria-current="page">Главная</a>
           </li>
-          <li class="main-navigation__list-item">
+          <li class="main-navigation__list-item main-navigation__list-item--mobile">
             <a class="link main-navigation__list-link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-navigation__list-item">
+          <li class="main-navigation__list-item main-navigation__list-item--mobile">
             <a class="link main-navigation__list-link" href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -88,28 +88,30 @@
       <section class="operation-example">
         <h2 class="title operation-example__title">Живой пример</h2>
         <p class="operation-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="list operation-example__list">
-          <li class="operation-example__item operation-example__item--weight">
-            <span class="operation-example__item-number">5 кг</span>
-            <span class="operation-example__item-number-subtitle">Снижение веса</span>
-          </li>
-          <li class="operation-example__item operation-example__item--time">
-            <span class="operation-example__item-number">60 дней</span>
-            <span class="operation-example__item-number-subtitle">Затрачено времени</span>
-          </li>
-          <li class="operation-example__item operation-example__item--total">
-            <span class="operation-example__item-total operation-example__item-total--title">Затраты на питание:</span>
-            <span class="operation-example__item-total operation-example__item-total--number">15 000 руб.</span>
-          </li>
-        </ul>
+        <div class="operation-example__list-wrapper">
+          <ul class="list operation-example__list">
+            <li class="operation-example__item operation-example__item--weight">
+              <span class="operation-example__item-number">5 кг</span>
+              <span class="operation-example__item-number-subtitle">Снижение<br>веса</span>
+            </li>
+            <li class="operation-example__item operation-example__item--time">
+              <span class="operation-example__item-number">60 дней</span>
+              <span class="operation-example__item-number-subtitle">Затрачено<br>времени</span>
+            </li>
+          </ul>
+          <h3 class="operation-example__list-total">
+            <span class="operation-example__list-total--title">Затраты на питание:</span>
+            <span class="operation-example__list-total--number">15 000 руб.</span>
+          </h3>
+        </div>
         <div class="operation-example__slider">
-          <picture>
+          <picture class="operation-example__slider-picture operation-example__slider-picture--before">
             <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet-desktop@1x.png 1x, images/cat-before-tablet-desktop@2x.png 2x">
-            <img class="operation-example__slider-image operation-example__slider-image--before" src="images/cat-before-mobile@1x.png" width="280" height="256" alt="Толстый пушистый серо-белый кот - до употребления Cat Energy.">
+            <img class="operation-example__slider-image" src="images/cat-before-mobile@1x.png" width="280" height="256" alt="Толстый пушистый серо-белый кот - до употребления Cat Energy.">
           </picture>
-          <picture>
+          <picture class="operation-example__slider-picture operation-example__slider-picture--before">
             <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet-desktop@1x.png 1x, images/cat-after-tablet-desktop@2x.png 2x">
-            <img class="operation-example__slider-image operation-example__slider-image--after" src="images/cat-after-mobile@1x.png" width="280" height="256" alt="Худой серо-белый кот - после употребления Cat Energy.">
+            <img class="operation-example__slider-image" src="images/cat-after-mobile@1x.png" width="280" height="256" alt="Худой серо-белый кот - после употребления Cat Energy.">
           </picture>
           <button class="operation-example__slider-button" type="button"><span class="visually-hidden">Меняет положение слайдера для отображения изображения до/после.</span></button>
         </div>
@@ -135,18 +137,18 @@
     </main>
 
     <footer class="main-footer">
-      <div class="main-footer__logo-wrapper logo">
+      <a class="link main-footer__logo-wrapper logo" href="index.html" aria-current="page">
         <img class="main-footer__logo logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
-      </div>
+      </a>
       <ul class="list main-footer__social-list social-list">
         <li class="social-list__item social-list__item--vk">
-          <a class="link social-list__link" href="#"><span class="visually-hidde">Мы в Вконтакте</span></a>
+          <a class="link social-list__link" href="#"><span class="visually-hidden">Мы в Вконтакте</span></a>
         </li>
         <li class="social-list__item social-list__item--yt">
-          <a class="link social-list__link" href="#"><span class="visually-hidde">Мы на YouTube</span></a>
+          <a class="link social-list__link" href="#"><span class="visually-hidden">Мы на YouTube</span></a>
         </li>
         <li class="social-list__item social-list__item--tg">
-          <a class="link social-list__link" href="#"><span class="visually-hidde">Мы в Телеграме</span></a>
+          <a class="link social-list__link" href="#"><span class="visually-hidden">Мы в Телеграме</span></a>
         </li>
       </ul>
       <a class="link main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">

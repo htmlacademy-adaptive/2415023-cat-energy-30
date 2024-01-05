@@ -10,32 +10,52 @@
 
 //Текст примера работы корма
 .operation-example__title {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  align-self: self-start;
+
   line-height: 40px;
 }
 
 .operation-example__text {
+  margin: 0;
+  margin-bottom: 35px;
+
   color: $text-secondary-color;
 }
 
-.operation-example__list {
+.operation-example__list-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
+.operation-example__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-around;
 }
 
 .operation-example__item {
-  // background-image: url("../../images/icons/stack.svg#icon-frame");
-  // background-color: red;
-}
+  position: relative;
+  width: 124px;
+  text-align: center;
 
-.operation-example__item--weight {
+  display: flex;
+  flex-direction: column;
 
-}
+  &::after {
+    @include pseudo-element;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 124px;
+    height: 56px;
 
-.operation-example__item--time {
-
-}
-
-.operation-example__item--total {
-
+    background: url("../../images/icons/stack.svg#icon-frame") no-repeat center;
+    background-size: 100%;
+  }
 }
 
 .operation-example__item-number {
@@ -43,46 +63,77 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+
+  margin-bottom: 8px;
 }
 
 .operation-example__item-number-subtitle {
   font-size: 12px;
+  font-weight: 400;
   line-height: 12px;
   text-transform: lowercase;
   color: $text-secondary-color;
 }
 
-.operation-example__item-total {
+.operation-example__list-total {
   font-family: $secondary-font-family;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
-}
-
-.operation-example__item-total--title {
-
-}
-
-.operation-example__item-total--number {
-
+  text-align: center;
 }
 
 
 //Слайдер
 .operation-example__slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
+.operation-example__slider-picture {
+  width: 100%;
+  height: auto;
 }
 
 .operation-example__slider-image {
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.operation-example__slider-image--before {
+.operation-example__slider-button {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
 
+  border: none;
+  background-color: $special-grey;
+  border-radius: 2px;
+
+  &::after {
+    @include pseudo-element;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 36px;
+    height: 36px;
+
+    background-color: $basic-white;
+    border-radius: 50%;
+    border: 2px solid $special-grey;
+
+    background-image: url("../../images/icons/stack.svg#icon-slider-pointers");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 18px;
+  }
 }
 
-.operation-example__slider-image--after {
-
-}
 
 .operation-example__slider-button {
 

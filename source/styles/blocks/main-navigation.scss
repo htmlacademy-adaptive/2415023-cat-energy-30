@@ -1,17 +1,27 @@
-.main-navigation {
-  display: flex;
-}
-
-//список
 .main-navigation__list {
-  position: relative;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  text-align: center;
+
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 1;
+  background-color: $basic-white;
 }
 
-.main-navigation__list--opened {
-  position: absolute;
-  left: 0;
+.main-navigation__list-item {
+  padding-bottom: 24px;
 
-  width: 100%;
+  &::before {
+    @include pseudo-element;
+    width: 100vw;
+    height: 1px;
+    margin-bottom: 24px;
+
+    background-color: $basic-additional-grey;
+  }
 }
 
 .main-navigation__list--closed {
@@ -30,30 +40,46 @@
   width: 24px;
   height: 38px;
   padding: 0;
+  margin-left: auto;
 
   background-color: $basic-black;
   mask: var(--form-button) no-repeat center;
 }
 
-.main-navigation__list-button--open {
-  --form-button: url("../../images/icons/stack.svg#icon-menu-burger");
-  mask-size: 24px 16px;
-}
-
-.main-navigation__list-button--closed {
+.main-navigation__list-button--mobile-opened {
   --form-button: url("../../images/icons/stack.svg#icon-form-cross");
   mask-size: 18px 18px;
 }
 
+.main-navigation__list-button--mobile-closed {
+  --form-button: url("../../images/icons/stack.svg#icon-menu-burger");
+  mask-size: 24px 16px;
+}
+
 
 @media (min-width: $tablet-width) {
-
   .main-navigation__list {
+    position: static;
     display: flex;
+    width: auto;
+    flex-direction: row;
     gap: 33px;
+
+    transform: translateX(0);
+    z-index: 0;
+    background-color: transparent;
   }
 
-  .main-navigation__list--opened {
+  .main-navigation__list-item {
+    padding: 0;
+
+    &::before {
+      position: fixed;
+      display: none;
+    }
+  }
+
+  .main-navigation__list--mobile-opened {
     position: relative;
   }
 

@@ -17,13 +17,12 @@
 
     z-index: -1;
 
-    width: 100vh;
-    height: auto;
+    width: 100vw;
     min-height: 302px;
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url(../../images/hero-background-mobile@1x.webp);
     background-repeat: no-repeat;
-    background-size: 320px 302px;
+    background-size: 100vw auto;
     background-position: center;
   }
 }

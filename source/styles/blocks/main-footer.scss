@@ -4,25 +4,46 @@
   align-items: center;
   position: relative;
 
-  padding: 40px 0;
+  padding: 20px 0;
 
   @include background-overlay($basic-grey);
 }
 
-.main-footer__company-logo {
-
-}
-
-.main-footer__social-list {
-
-}
-
 .main-footer__copyright {
+  padding: 20px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 
+  color: $text-secondary-color;
+  font-family: $basic-font-family;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+
+  &::after {
+    @include pseudo-element;
+
+    width: 27px;
+    height: 34px;
+
+    background-color: $special-grey;
+    mask: url("../../images/logo-html-academy.svg") no-repeat center;
+  }
 }
 
 .main-footer__copyright-name {
   color: $text-secondary-color;
   font-size: 16px;
   line-height: 20px;
+}
+
+.main-footer > *:not(:last-child) {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 20px 0;
+
+  border-bottom: 1px solid $secondary-grey;
 }

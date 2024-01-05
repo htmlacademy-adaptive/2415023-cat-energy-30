@@ -1,5 +1,7 @@
 .header {
   // padding: $mobile-container-padding;
+  position: relative;
+
   padding-top: 12px;
   padding-bottom: 12px;
 
@@ -19,7 +21,8 @@
 }
 
 .header__navigation {
-  margin-left: auto;
+  position: absolute;
+  top: 100%;
 }
 
 @media (min-width: $tablet-width) {
@@ -28,6 +31,13 @@
     padding-top: 25px;
     padding-bottom: 65px;
   }
+
+  .header__navigation {
+    position: static;
+    width: auto;
+    margin-left: auto;
+  }
+
 
   .header__company-logo-link {
     flex: initial;
