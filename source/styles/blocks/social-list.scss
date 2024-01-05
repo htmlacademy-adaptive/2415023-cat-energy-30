@@ -1,23 +1,43 @@
 .social-list {
-
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 .social-list__item {
+  display: flex;
+  width: 28px;
+  height: 22px;
+  justify-content: center;
+  align-items: center;
 
+  &::before {
+    @include pseudo-element;
+    width: 100%;
+    height: 100%;
+
+    background-color: $special-grey;
+
+    mask: var(--social-icon) no-repeat center;
+  }
+
+  &:hover::before {
+    background-color: $company-primary-color;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .social-list__item--vk {
-
+  --social-icon: url("../../images/icons/stack.svg#icon-vkontakte");
 }
 
 .social-list__item--yt {
-
+  --social-icon: url("../../images/icons/stack.svg#icon-youtube");
 }
 
 .social-list__item--tg {
-
-}
-
-.social-list__link {
-
+  --social-icon: url("../../images/icons/stack.svg#icon-telegram");
 }

@@ -1,14 +1,32 @@
-.main-navigation {
-
-}
-
-//список
 .main-navigation__list {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  text-align: center;
 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 1;
+  background-color: $basic-white;
 }
 
 .main-navigation__list-item {
+  padding-bottom: 24px;
 
+  &::before {
+    @include pseudo-element;
+    width: 100vw;
+    height: 1px;
+    margin-bottom: 24px;
+
+    background-color: $basic-additional-grey;
+  }
+}
+
+.main-navigation__list--closed {
+  position: absolute;
+  transform: scale(0);
 }
 
 .main-navigation__list-link {
@@ -16,25 +34,48 @@
   line-height: 20px;
 }
 
-.main-navigation__list-link--current {
+@media (min-width: $tablet-width) {
+  .main-navigation__list {
+    position: static;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    gap: 33px;
 
+    transform: translateX(0);
+    z-index: 0;
+    background-color: transparent;
+  }
+
+  .main-navigation__list-item {
+    padding: 0;
+
+    &::before {
+      position: fixed;
+      display: none;
+    }
+  }
+
+  .main-navigation__list--mobile-opened {
+    position: relative;
+  }
+
+  .main-navigation__list-link {
+    padding-bottom: 8px;
+  }
+
+  .main-navigation__list-link--current {
+    border-bottom: 2px solid $company-primary-color;
+  }
 }
 
-//Кнопка
-.main-navigation__list-button {
-  width: 24px;
-  height: 38px;
 
-  background-color: $basic-black;
-  mask: var(--form-button) no-repeat center;
-}
+@media (min-width: $desktop-width) {
+  .main-navigation__list-link {
+    color: $basic-white;
+  }
 
-.main-navigation__list-button--open {
-  --form-button: url("../../images/icons/stack.svg#icon-menu-burger");
-  mask-size: 24px 16px;
-}
-
-.main-navigation__list-button--close {
-  --form-button: url("../../images/icons/stack.svg#icon-form-cross");
-  mask-size: 18px 18px;
+  .main-navigation__list-link--current {
+    border-bottom: 2px solid $basic-white;
+  }
 }

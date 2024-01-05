@@ -1,27 +1,38 @@
 .product-operation {
+  display: flex;
+  flex-direction: column;
 
+  margin-bottom: 50px;
+  // padding: $mobile-container-padding;
 }
 
 .product-operation__title {
   line-height: 40px;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .product-operation__list {
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .product-operation__item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+
   color: $text-secondary-color;
 
   &::before {
-    content: " ";
+    @include pseudo-element;
 
-    display: block;
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
 
     background: $company-primary-color var(--background-item) no-repeat 50% 50%;
-    background-size: 25px 30px;
+    background-size: 30px 30px;
   }
 }
 
@@ -39,4 +50,65 @@
 
 .product-operation__item--changes {
   --background-item: url("../../images/icons/stack.svg#icon-clock");
+}
+
+.product-operation__item-text {
+  margin-top: 3px;
+}
+
+@media (min-width: $tablet-width) {
+  .product-operation {
+    // padding: $tablet-container-padding;
+  }
+
+  .product-operation__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 250px));
+    grid-template-rows: repeat(auto-fill, 280px);
+    gap: 30px;
+    max-width: 1300px;
+    justify-content: space-between;
+
+    counter-reset: section; /**/
+  }
+
+  .product-operation__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: min-content;
+    row-gap: 30px;
+
+    &::before {
+      content: " ";
+      margin-top: 30px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      counter-increment: section;
+      content: counters(section, "");
+      position: absolute;
+      grid-column: 2;
+      justify-self: end;
+      z-index: -1;
+
+      color: $basic-grey;
+      font-family: $secondary-font-family;
+      font-size: 280px;
+      line-height: 280px;
+    }
+  }
+
+  .product-operation__item-text {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-operation {
+    // padding: $desktop-container-padding;
+  }
 }
