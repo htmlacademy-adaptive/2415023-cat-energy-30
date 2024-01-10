@@ -28,7 +28,6 @@
 
     width: 50px;
     height: 50px;
-    margin: 10px;
 
     grid-row: 1;
     grid-column: 1;
@@ -42,23 +41,28 @@
 
     width: 70px;
     height: 70px;
+    margin-left: -9px;
+    padding-left: 9px;
 
     grid-row: 1;
     grid-column: 1;
 
-    background: var(--background-item) no-repeat center center;
+    background: var(--background-item) no-repeat;
     background-size: var(--background-item-size);
+    background-position: var(--background-item-position);
   }
 }
 
 .programs__item--slim {
   --background-item: url("../../images/icons/stack.svg#programs-slim");
   --background-item-size: 36px 50px;
+  --background-item-position: 16px 7px;
 }
 
 .programs__item--pro {
   --background-item: url("../../images/icons/stack.svg#programs-pro");
   --background-item-size: 67px 28px;
+  --background-item-position: 0 center;
 }
 
 .programs__program-title-link {
@@ -125,6 +129,80 @@
       content: "";
       display: none;
     }
+  }
+
+  .programs__item {
+    padding: 75px 29px 55px 52px;
+    grid-template-columns: auto;
+    align-items: start;
+    column-gap: 18px;
+
+    &::before {
+      @include pseudo-element;
+
+      width: 200px;
+      height: 200px;
+      justify-self: center;
+      align-self: center;
+
+      grid-row: 1 / 4;
+      grid-column: 2;
+    }
+
+    &::after {
+      @include pseudo-element;
+
+      width: 270px;
+      height: 230px;
+      margin-left: 0;
+      padding-left: 0;
+      justify-self: center;
+
+      grid-row: 1/ 4;
+      grid-column: 2;
+    }
+  }
+
+  .programs__item--slim {
+    --background-item-size: 140px 194px;
+    --background-item-position: center 5px;
+  }
+
+  .programs__item--pro {
+    --background-item-size: 268px 112px;
+  }
+
+  .programs__program-title-link {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .programs__program-title {
+    margin: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .programs__program-description {
+    margin: 0;
+
+    grid-row: 2;
+    grid-column: 1;
+
+    color: $basic-black;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programs__program-button {
+    padding: 0;
+    align-self: center;
+
+    grid-row: 3;
+
+    font-size: 20px;
+    line-height: normal;
   }
 }
 

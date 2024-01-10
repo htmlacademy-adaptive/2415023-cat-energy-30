@@ -35,6 +35,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-navigation {
+    padding-right: 4px;
+  }
+
   .main-navigation__list {
     position: static;
     display: flex;

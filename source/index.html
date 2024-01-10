@@ -23,7 +23,9 @@
         </picture>
         <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
       </a>
-      <button class="button header__menu-button header__menu-button--closed" type="button"><span class="visually-hidden">Открывает/Закрывает навигацию</span></button>
+      <a class="button header__menu-button header__menu-button--closed" href="menu.html">
+        <span class="visually-hidden">Открывает/Закрывает навигацию</span>
+      </a>
       <nav class="header__navigation main-navigation">
         <ul class="list main-navigation__list main-navigation__list--closed"> <!-- --opened/closed - для открытой/закрытой навигации -->
           <li class="main-navigation__list-item main-navigation__list-item--mobile">
@@ -92,11 +94,11 @@
           <ul class="list operation-example__list">
             <li class="operation-example__item operation-example__item--weight">
               <span class="operation-example__item-number">5 кг</span>
-              <span class="operation-example__item-number-subtitle">Снижение<br>веса</span>
+              <span class="operation-example__item-number-subtitle">Снижение веса</span>
             </li>
             <li class="operation-example__item operation-example__item--time">
               <span class="operation-example__item-number">60 дней</span>
-              <span class="operation-example__item-number-subtitle">Затрачено<br>времени</span>
+              <span class="operation-example__item-number-subtitle">Затрачено времени</span>
             </li>
           </ul>
           <h3 class="operation-example__list-total">
@@ -156,7 +158,7 @@
       </a>
     </footer>
 
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function() {
         let menuButtons = document.querySelectorAll('.header__menu-button');
         let navigation = document.querySelector('.main-navigation__list');
@@ -177,6 +179,6 @@
           });
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>

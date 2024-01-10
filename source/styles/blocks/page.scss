@@ -1,6 +1,7 @@
 .page__body {
-  max-width: 320px;
+  max-width: 280px;
   margin: 0 auto;
+  // padding: 0 20px;
 
   outline: 1px solid blue;
 }
@@ -8,6 +9,8 @@
 @media (min-width: $tablet-width) {
   .page__body {
     max-width: 708px;
+    // padding: 0 30px;
+
     outline: 3px solid blue;
   }
 }
@@ -15,5 +18,6 @@
 @media (min-width: $desktop-width) {
   .page__body {
     max-width: 1220px;
+    // padding: 0 110px;
   }
 }
