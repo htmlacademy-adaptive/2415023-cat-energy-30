@@ -84,6 +84,7 @@
   margin-top: 15px;
 
   color: $text-secondary-color;
+
   &::after {
     @include pseudo-element;
 
@@ -122,13 +123,6 @@
   .programs {
     // padding: $tablet-container-padding;
     margin-bottom: 45px;
-  }
-
-  .programs__program-description {
-    &::after {
-      content: "";
-      display: none;
-    }
   }
 
   .programs__item {
@@ -193,6 +187,11 @@
     color: $basic-black;
     font-size: 16px;
     line-height: 24px;
+
+    &::after {
+      content: "";
+      display: none;
+    }
   }
 
   .programs__program-button {

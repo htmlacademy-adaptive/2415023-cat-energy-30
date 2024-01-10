@@ -27,7 +27,7 @@
         <span class="visually-hidden">Открывает/Закрывает навигацию</span>
       </a>
       <nav class="header__navigation main-navigation">
-        <ul class="list main-navigation__list main-navigation__list--closed"> <!-- --opened/closed - для открытой/закрытой навигации -->
+        <ul class="list main-navigation__list main-navigation__list--closed"><!-- opened/closed - для открытой/закрытой навигации -->
           <li class="main-navigation__list-item main-navigation__list-item--mobile">
             <a class="link main-navigation__list-link main-navigation__list-link--current" href="#" aria-current="page">Главная</a>
           </li>
@@ -102,8 +102,8 @@
             </li>
           </ul>
           <h3 class="operation-example__list-total">
-            <span class="operation-example__list-total--title">Затраты на питание:</span>
-            <span class="operation-example__list-total--number">15 000 руб.</span>
+            <span class="operation-example__list-total-title">Затраты на питание:</span>
+            <span class="operation-example__list-total-number">15 000 руб.</span>
           </h3>
         </div>
         <div class="operation-example__slider">
@@ -157,29 +157,5 @@
         <span class="main-footer__copyright-name">HTML Academy</span>
       </a>
     </footer>
-
-    <!-- Ниже находится скрипт для работы кнопки навигации в мобильной версии -->
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        let menuButtons = document.querySelectorAll('.header__menu-button');
-        let navigation = document.querySelector('.main-navigation__list');
-
-        menuButtons.forEach(function(menuButton) {
-          menuButton.addEventListener('click', function() {
-            menuButton.classList.toggle('header__menu-button--closed');
-            menuButton.classList.toggle('header__menu-button--opened');
-
-            // Проверяем, открыто ли меню
-            if (menuButton.classList.contains('header__menu-button--opened')) {
-              navigation.classList.add('main-navigation__list--opened');
-              navigation.classList.remove('main-navigation__list--closed');
-            } else {
-              navigation.classList.add('main-navigation__list--closed');
-              navigation.classList.remove('main-navigation__list--opened');
-            }
-          });
-        });
-      });
-    </script> -->
   </body>
 </html>
