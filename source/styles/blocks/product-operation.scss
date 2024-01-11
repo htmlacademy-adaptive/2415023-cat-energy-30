@@ -1,9 +1,10 @@
 .product-operation {
+  @include container-item(0);
+
   display: flex;
   flex-direction: column;
 
   margin-bottom: 50px;
-  // padding: $mobile-container-padding;
 }
 
 .product-operation__title {
@@ -107,7 +108,7 @@
   }
 
   .product-operation__title {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
     font-size: 60px;
     line-height: 60px;
@@ -121,6 +122,22 @@
   }
 }
 
-// @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .product-operation {
+    // padding: $tablet-container-padding;
+    margin-bottom: 70px;
+  }
 
-// }
+  .product-operation__list {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 245px));
+    margin-right: 0;
+  }
+
+  .product-operation__item {
+
+    &::before {
+      content: " ";
+      margin-top: 40px;
+    }
+  }
+}

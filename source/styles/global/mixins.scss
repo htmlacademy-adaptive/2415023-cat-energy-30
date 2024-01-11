@@ -13,7 +13,6 @@
   display: block;
 }
 
-
 @mixin background-overlay($color) {
   &::after {
     @include pseudo-element;
@@ -35,4 +34,22 @@
   justify-content: $justify-content;
 
   border-bottom: $border;
+}
+
+
+/* контейнеры */
+@mixin container-item($padding: 20px)  {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 $padding;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 0 110px;
+  }
 }

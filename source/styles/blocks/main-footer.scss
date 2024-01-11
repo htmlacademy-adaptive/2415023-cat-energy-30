@@ -1,4 +1,6 @@
 .main-footer {
+  @include container-item(0);
+
   display: flex;
   flex-direction: column;
   align-items: center;

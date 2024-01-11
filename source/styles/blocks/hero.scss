@@ -1,4 +1,6 @@
 .hero {
+  @include container-item;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -105,8 +107,9 @@
 @media (min-width: $desktop-width) {
   .hero {
     position: static;
-    padding-right: 110px;
-    margin-bottom: 80px;
+    min-height: 465px;
+    padding: 0 80px;
+    margin-bottom: 84px;
 
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -125,7 +128,7 @@
 
       background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/hero-background-desktop@1x.jpg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: cover;
     }
   }
 
@@ -135,10 +138,17 @@
   }
 
   .hero__image-container {
-    grid-row: span 2;
-    grid-column: 2;
+    position: relative;
+  }
 
-    margin: 0;
+  .hero__image {
+    position: absolute;
+    top: -85px;
+    right: -25px;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 50px;
   }
 
   .hero__button {

@@ -1,5 +1,7 @@
 .header {
   // padding: $mobile-container-padding;
+  @include container-item(0);
+
   position: relative;
 
   padding-top: 12px;
@@ -78,6 +80,7 @@
   .header {
     // padding: $desktop-container-padding;
     padding-top: 55px;
+    padding-bottom: 110px;
   }
 
   .header__company-logo-text {

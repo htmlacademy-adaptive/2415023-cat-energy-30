@@ -1,30 +1,7 @@
 .page__body {
-  outline: 1px solid #0000ff;
-}
-
-.page__container {
+  // outline: 1px solid #0000ff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 280px;
-  margin: 0 auto;
-  // padding: 0 20px;
-
-  // overflow-x: hidden;
-  outline: 3px solid #2eb705;
-}
-
-
-@media (min-width: $tablet-width) {
-  .page__container {
-    max-width: 708px;
-    // padding: 0 30px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page__container {
-    max-width: 1220px;
-    // padding: 0 110px;
-  }
+  margin: 0;
 }
