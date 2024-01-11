@@ -22,7 +22,7 @@
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/hero-background-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 100vw auto;
+    background-size: cover;
     background-position: center;
   }
 }

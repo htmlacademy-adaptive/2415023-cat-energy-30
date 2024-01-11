@@ -32,12 +32,34 @@
   align-self: center;
 }
 
-.contacts__map-wrapper {
-
-}
-
 .contacts__map-image {
   display: block;
   width: 100vw;
   height: auto;
+}
+
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    align-items: center;
+  }
+
+  .contacts__title {
+    max-width: 160px;
+  }
+
+  .contacts__adress {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 25px;
+
+    justify-self: end;
+    max-width: 157px;
+
+    text-align: end;
+  }
 }

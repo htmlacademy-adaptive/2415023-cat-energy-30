@@ -144,6 +144,22 @@
 @media (min-width: $tablet-width) {
   .operation-example {
     @include background-overlay(transparent);
+    position: relative;
+    padding-bottom: 100px;
+
+    &::after {
+      @include pseudo-element;
+      position: absolute;
+      top: auto;
+      bottom: 0;
+
+      z-index: -1;
+
+      width: 100vw;
+      height: 462px;
+
+      background-color: $basic-darker-grey;
+    }
   }
 
   .operation-example__title {
@@ -201,5 +217,24 @@
     margin: 13px 0 0 auto;
 
     font-size: 20px;
+  }
+
+  /* слайдер */
+  .operation-example__slider {
+    width: 560px;
+    height: 512px;
+  }
+
+  .operation-example__slider-wrapper {
+    display: grid;
+    overflow: hidden;
+  }
+
+  .operation-example__slider-picture--after {
+    transform: translateX(-50%);
+  }
+
+  .operation-example__slider-image {
+    width: auto;
   }
 }
