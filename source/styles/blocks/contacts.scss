@@ -36,8 +36,7 @@
 
 .contacts__map-image {
   display: block;
-  width: 100vw;
-  height: auto;
+  object-fit: cover;
 }
 
 
@@ -63,5 +62,36 @@
     max-width: 157px;
 
     text-align: end;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__wrapper {
+    position: absolute;
+    width: 565px;
+    top: 95px;
+    left: 110px;
+    padding: 60px 80px;
+
+    z-index: 1;
+
+    background-color: $basic-white;
+  }
+
+  .contacts__title {
+    color: $text-secondary-lighter-color;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .contacts__adress {
+    font-size: 16px;
+    align-items: start;
+    text-align: start;
   }
 }

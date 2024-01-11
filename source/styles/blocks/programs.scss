@@ -122,7 +122,6 @@
 
 @media (min-width: $tablet-width) {
   .programs {
-    // padding: $tablet-container-padding;
     margin-bottom: 45px;
   }
 
@@ -190,7 +189,7 @@
     line-height: 24px;
 
     &::after {
-      content: "";
+      @include empty-content;
       display: none;
     }
   }
@@ -208,7 +207,6 @@
 
 @media (min-width: $desktop-width) {
   .programs {
-    // padding: $desktop-container-padding;
     margin-bottom: 70px;
   }
 

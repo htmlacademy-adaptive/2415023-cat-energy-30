@@ -1,3 +1,4 @@
+/* шрифты */
 @mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
     font-family: $font-family;
@@ -8,11 +9,17 @@
   }
 }
 
-@mixin pseudo-element {
+/* псевдоэлемент */
+@mixin empty-content {
   content: "";
+}
+
+@mixin pseudo-element {
+  @include empty-content;
   display: block;
 }
 
+/* фоновый цвет */
 @mixin background-overlay($color) {
   &::after {
     @include pseudo-element;
@@ -26,16 +33,6 @@
     background-color: $color;
   }
 }
-
-@mixin footer-item ($justify-content, $border) {
-  display: flex;
-  width: 100%;
-  padding: 20px 0;
-  justify-content: $justify-content;
-
-  border-bottom: $border;
-}
-
 
 /* контейнеры */
 @mixin container-item($padding: 20px) {
@@ -52,4 +49,14 @@
     width: 1220px;
     padding: 0 110px;
   }
+}
+
+/* элемент футера */
+@mixin footer-item ($justify-content, $border) {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  justify-content: $justify-content;
+
+  border-bottom: $border;
 }

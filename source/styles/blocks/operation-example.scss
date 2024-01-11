@@ -243,8 +243,24 @@
 @media (min-width: $desktop-width) {
   .operation-example {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 432px 1fr;
     grid-template-rows: auto;
+
+    padding-bottom: 75px;
+
+    &::after {
+      @include pseudo-element;
+      position: absolute;
+      top: auto;
+      bottom: 0;
+
+      z-index: -1;
+
+      width: 100vw;
+      height: 460px;
+
+      background-color: $basic-darker-grey;
+    }
   }
 
   .operation-example__title {
@@ -252,12 +268,40 @@
     margin-bottom: 76px;
   }
 
-  .operation-example__slider {
-    grid-row: 1 / 4;
-    grid-column: 2;
+  .operation-example__text {
+    margin-top: 70px;
   }
 
   .operation-example__list-wrapper {
+    align-self: start;
     display: grid;
+    margin-bottom: 0;
+  }
+
+  .operation-example__list {
+    gap: 42px;
+  }
+
+  .operation-example__item {
+    margin-top: 13px;
+  }
+
+  .operation-example__item-number-subtitle {
+    max-width: 135px;
+  }
+
+  .operation-example__list-total {
+    flex-direction: row;
+    margin: 0;
+    margin-top: 55px;
+    gap: 65px;
+  }
+
+  .operation-example__slider {
+    justify-self: end;
+    align-self: self-start;
+
+    grid-row: 1 / 4;
+    grid-column: 2;
   }
 }

@@ -72,3 +72,13 @@
     gap: 23px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-footer {
+    padding: 48px 0;
+  }
+
+  .main-footer__social-list {
+    margin-left: 35px;
+  }
+}

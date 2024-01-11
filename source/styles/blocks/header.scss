@@ -1,5 +1,4 @@
 .header {
-  // padding: $mobile-container-padding;
   @include container-item(0);
 
   position: relative;
@@ -52,7 +51,6 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    // padding: $tablet-container-padding;
     padding-top: 25px;
     padding-bottom: 65px;
   }
@@ -78,7 +76,6 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    // padding: $desktop-container-padding;
     padding-top: 55px;
     padding-bottom: 110px;
   }

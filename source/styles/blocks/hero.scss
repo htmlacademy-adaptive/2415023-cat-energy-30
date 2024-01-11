@@ -52,6 +52,7 @@
   .hero {
     position: relative;
     padding-left: 90px;
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
