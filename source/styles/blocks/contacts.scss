@@ -50,6 +50,10 @@
 
   .contacts__title {
     max-width: 160px;
+
+    color: $text-secondary-lighter-color;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .contacts__adress {
@@ -61,6 +65,7 @@
     justify-self: end;
     max-width: 157px;
 
+    font-size: 16px;
     text-align: end;
   }
 }
@@ -83,14 +88,9 @@
     background-color: $basic-white;
   }
 
-  .contacts__title {
-    color: $text-secondary-lighter-color;
-    font-size: 20px;
-    line-height: 26px;
-  }
-
   .contacts__adress {
-    font-size: 16px;
+    gap: 19px;
+
     align-items: start;
     text-align: start;
   }

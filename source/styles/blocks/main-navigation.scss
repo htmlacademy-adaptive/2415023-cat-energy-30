@@ -66,6 +66,9 @@
 
   .main-navigation__list-link {
     padding-bottom: 8px;
+
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .main-navigation__list-link--current {
@@ -77,6 +80,9 @@
 @media (min-width: $desktop-width) {
   .main-navigation__list-link {
     color: $basic-white;
+
+    font-size: 20px;
+    line-height: normal;
   }
 
   .main-navigation__list-link--current {

@@ -49,6 +49,7 @@
   .main-footer > * {
     border-bottom: none;
     width: auto;
+    padding-top: 0;
   }
 
   .main-footer {
@@ -68,6 +69,10 @@
     min-height: 24px;
   }
 
+  .main-footer__social-list {
+    margin-left: 35px;
+  }
+
   .main-footer__copyright {
     gap: 23px;
   }
@@ -78,7 +83,7 @@
     padding: 48px 0;
   }
 
-  .main-footer__social-list {
-    margin-left: 35px;
+  .main-footer > * {
+    padding-top: 20px;
   }
 }

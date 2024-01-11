@@ -36,7 +36,7 @@
 
 .hero__subtitle {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 
   font-size: $basic-font-size;
   line-height: 14px;
@@ -52,6 +52,7 @@
   .hero {
     position: relative;
     padding-left: 90px;
+    margin-bottom: 0;
     box-sizing: border-box;
 
     display: flex;
@@ -75,6 +76,8 @@
   }
 
   .hero__subtitle {
+    margin-bottom: 50px;
+
     font-size: 20px;
     line-height: 20px;
   }
@@ -85,6 +88,7 @@
     max-width: 245px;
     max-height: 55px;
     margin: 0;
+    padding: 14px 26px;
 
     box-sizing: border-box;
     justify-content: center;

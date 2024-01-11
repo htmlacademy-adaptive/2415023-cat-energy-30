@@ -6,6 +6,8 @@
   align-items: center;
   position: relative;
 
+  padding-bottom: 40px;
+
   @include background-overlay($basic-darker-grey);
 }
 
@@ -27,7 +29,7 @@
 
 .operation-example__list-wrapper {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .operation-example__list {
@@ -186,6 +188,10 @@
     margin-bottom: 100px;
   }
 
+  .operation-example__list {
+    gap: 43px;
+  }
+
   .operation-example__item {
     min-height: 77px;
     width: 162px;
@@ -204,6 +210,8 @@
   }
 
   .operation-example__item-number-subtitle {
+    max-width: 125px;
+
     font-size: 14px;
     line-height: 14px;
   }

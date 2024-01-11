@@ -67,8 +67,8 @@
     max-width: 1300px;
     grid-template-columns: repeat(auto-fill, minmax(230px, 250px));
     grid-template-rows: repeat(auto-fill, minmax(280px, auto));
-    gap: 30px;
-    margin-right: 80px;
+    gap: 38px;
+    margin-right: 75px;
     justify-content: space-between;
 
     counter-reset: section;
@@ -85,7 +85,7 @@
 
     &::before {
       @include empty-content;
-      margin-top: 30px;
+      margin-top: 45px;
 
       width: 80px;
       height: 80px;

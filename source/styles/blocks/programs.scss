@@ -16,6 +16,7 @@
 .programs__item {
   width: 100%;
   padding: 20px;
+  padding-top: 15px;
   box-sizing: border-box;
 
   display: grid;
@@ -73,7 +74,7 @@
 .programs__program-title {
   display: block;
   position: relative;
-  margin-left: 10px;
+  margin-top: 8px;
 
   font-size: 24px;
   line-height: 37px;
@@ -82,7 +83,7 @@
 .programs__program-description {
   grid-column: 1 / 3;
   margin: 0;
-  margin-top: 15px;
+  margin-top: 10px;
 
   color: $text-secondary-color;
 
@@ -125,8 +126,12 @@
     margin-bottom: 45px;
   }
 
+  .programs__list {
+    gap: 30px;
+  }
+
   .programs__item {
-    padding: 75px 29px 55px 52px;
+    padding: 75px 29px 64px 52px;
     grid-template-columns: auto;
     align-items: start;
     column-gap: 18px;
@@ -159,11 +164,12 @@
 
   .programs__item--slim {
     --background-item-size: 140px 194px;
-    --background-item-position: center 5px;
+    --background-item-position: 67px 3px;
   }
 
   .programs__item--pro {
     --background-item-size: 268px 112px;
+    --background-item-position: center center;
   }
 
   .programs__program-title-link {
@@ -196,18 +202,30 @@
 
   .programs__program-button {
     padding: 0;
-    align-self: center;
+    margin-bottom: -6px;
+    align-self: end;
+    gap: 27px;
 
     grid-row: 3;
 
     font-size: 20px;
     line-height: normal;
+
+    &::after {
+      @include pseudo-element;
+
+      width: 34px;
+      height: 14px;
+
+      background-color: $basic-black;
+      mask: url("../../images/icons/stack.svg#icon-arrow") no-repeat center;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .programs {
-    margin-bottom: 70px;
+    margin-bottom: 75px;
   }
 
   .programs__list {
@@ -283,9 +301,5 @@
     grid-column: 1/3;
 
     gap: 26px;
-
-    &::after {
-      transform: scale(1.2);
-    }
   }
 }
