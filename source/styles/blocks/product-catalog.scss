@@ -130,7 +130,7 @@
 @media (min-width: $tablet-width) {
   .product-catalog__title {
     padding-top: 0;
-    padding-bottom: 84px;
+    padding-bottom: 57px;
     margin: 0;
 
     border: none;
@@ -143,7 +143,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 34px;
+    margin-bottom: 70px;
   }
 
   .product-catalog__card {
@@ -152,17 +154,19 @@
     position: relative;
     align-items: center;
     width: 250px;
-    padding: 10px 37px 40px 37px;
+    padding: 20px 37px 40px 37px;
 
     @include background-overlay($basic-grey, 100%, 80%, 0);
   }
 
   .product-catalog__card-image-link {
-    margin-bottom: 22px;
+    padding-top: 15px;
+    margin-bottom: 19px;
   }
 
   .product-catalog__card-title-link {
     align-self: inherit;
+    margin-bottom: 15px;
   }
 
   .product-catalog__card-title {
@@ -170,6 +174,7 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 135px;
+    margin: 0;
 
     font-size: 20px;
     line-height: 24px;
@@ -181,5 +186,70 @@
       content: ' ';
       white-space: pre;
     }
+  }
+
+  .product-catalog__card-properties {
+    width: 100%;
+    margin-bottom: 33px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .product-catalog__card-properties-item {
+    margin-top: 6px;
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid $secondary-grey-darker;
+  }
+
+  .product-catalog__card-button {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* дополнительная карточка */
+  .product-catalog__additional-card {
+    @include background-overlay(transparent, 0, 0, 0);
+
+    padding-top: 140px;
+  }
+
+  .product-catalog__additional-card-show-one-more-button {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 49px;
+
+    background-color: transparent;
+    border: none;
+
+    &::before {
+      @include pseudo-element;
+      width: 100%;
+      height: 100%;
+
+      background-color: $secondary-grey-lighter;
+
+      mask: url("../../images/icons/stack.svg#icon-plus") no-repeat center;
+      mask-size: 60px 60px;
+    }
+  }
+
+  .product-catalog__card-button {
+    margin-top: auto;
+    box-sizing: border-box;
+  }
+
+  .product-catalog__additional-card-title-link {
+    margin-bottom: 20px;
+  }
+
+  .product-catalog__additional-card-show-more-text {
+    max-width: 170px;
+
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
   }
 }

@@ -66,8 +66,6 @@
 
 // кнопка продукта
 .additional-products__card-button {
-  // padding-top: ;
-
   font-size: 16px;
   line-height: 20px;
 }
@@ -78,7 +76,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 290px;
+  height: 290px;
   margin-top: 37px;
   margin-bottom: 35px;
 
@@ -98,7 +96,7 @@
     height: 100%;
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-mobile@1x.png");
-    background-repeat: no-repeat;
+    background-repeat: no-repeat no-repeat no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -108,7 +106,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 161px;
   margin: 0;
 
   color: $basic-white;
@@ -125,8 +122,131 @@
 
     background-color: #ffffff;
     mask: url("../../images/icons/stack.svg#icon-gift") no-repeat center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    mask-size: cover;
+  }
+}
+
+.additional-products__promo-text-gift {
+  max-width: 161px;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products__title {
+    margin-left: 40px;
+    position: relative;
+    padding: 0;
+    margin-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    border-bottom: none;
+
+    &::before {
+      content: "";
+      content: "";
+      position: absolute;
+      left: -70px;
+      top: 50%;
+      margin-top: 7px;
+      width: 30px;
+      height: 2px;
+      background-color: $company-primary-color;;
+      transform: translateY(-50%);
+    }
+  }
+
+  .additional-products__list {
+    margin-bottom: 69px;
+  }
+
+  .additional-products__card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 27px 38px;
+
+    border: 1px solid $secondary-grey-darker;
+    border-bottom: none;
+  }
+
+  .additional-products__card:last-of-type {
+    border-bottom: 1px solid $secondary-grey-darker;
+  }
+
+  .additional-products__card-title {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-products__card-properties {
+    margin-left: auto;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-products__card-properties-price {
+    margin-left: 50px;
+  }
+
+  .additional-products__card-button {
+    flex-basis: 100%;
+  }
+
+  // промо-блок с подарками
+  .additional-products__promo {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 200px;
+  padding: 0 125px 20px 77px;
+  margin-bottom: 75px;
+  box-sizing: border-box;
+
+  color: $basic-white;
+  text-align: center;
+
+    &::before {
+      @include pseudo-element;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      z-index: -1;
+
+      background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-tablet@1x.png");
+    }
+  }
+
+  .additional-products__promo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    color: $basic-white;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: start;
+
+    &::before {
+      @include pseudo-element;
+
+      width: 80px;
+      height: 83px;
+
+      background-color: #ffffff;
+      mask: url("../../images/icons/stack.svg#icon-gift") no-repeat center;
+      mask-size: 80px 83px;
+    }
+  }
+
+  .additional-products__promo-text-gift {
+    margin-top: 20px;
   }
 }
