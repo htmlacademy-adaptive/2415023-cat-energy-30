@@ -20,14 +20,15 @@
 }
 
 /* фоновый цвет */
-@mixin background-overlay($color) {
+@mixin background-overlay($color, $width: 100vw, $height: 100%, $left: calc(-50vw + 50%)) {
   &::after {
     @include pseudo-element;
     position: absolute;
-    top: 0;
-    left: calc(-50vw + 50%);
-    width: 100vw;
-    height: 100%;
+    top: auto;
+    bottom: 0;
+    left: $left;
+    width: $width;
+    height: $height;
     z-index: -1;
 
     background-color: $color;
@@ -39,6 +40,9 @@
   width: 280px;
   margin: 0 auto;
   padding: 0 $padding;
+
+  // border-left: 2px solid rgb(255, 0, 0, 0.3);
+  // border-right: 2px solid rgb(255, 0, 0, 0.3);
 
   @media (min-width: $tablet-width) {
     width: 708px;

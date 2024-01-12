@@ -146,23 +146,9 @@
 
 @media (min-width: $tablet-width) {
   .operation-example {
-    @include background-overlay(transparent);
+    @include background-overlay($basic-darker-grey, 100vw, 44%);
     position: relative;
     padding-bottom: 100px;
-
-    &::after {
-      @include pseudo-element;
-      position: absolute;
-      top: auto;
-      bottom: 0;
-
-      z-index: -1;
-
-      width: 100vw;
-      height: 462px;
-
-      background-color: $basic-darker-grey;
-    }
   }
 
   .operation-example__title {
@@ -256,19 +242,7 @@
 
     padding-bottom: 75px;
 
-    &::after {
-      @include pseudo-element;
-      position: absolute;
-      top: auto;
-      bottom: 0;
-
-      z-index: -1;
-
-      width: 100vw;
-      height: 460px;
-
-      background-color: $basic-darker-grey;
-    }
+    @include background-overlay($basic-darker-grey, 100vw, 75%);
   }
 
   .operation-example__title {
