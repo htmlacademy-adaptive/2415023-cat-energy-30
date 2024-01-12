@@ -20,7 +20,10 @@
           <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
           <img class="header__company-logo-image logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
         </picture>
-        <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+        <picture class="header__logo-container">
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
+          <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+        </picture>
       </a>
       <button class="button header__menu-button header__menu-button--closed" type="button">
         <span class="visually-hidden">Открывает/Закрывает навигацию</span>
@@ -56,10 +59,7 @@
               </picture>
             </a>
             <a class="link product-catalog__card-title-link" href="#">
-              <h3 class="title product-catalog__card-title">
-                <span class="product-catalog__card-text product-catalog__product-name">Cat Energy</span>
-                <span class="product-catalog__card-text product-catalog__product-version">Pro 500 г</span>
-              </h3>
+              <h3 class="title product-catalog__card-title">Cat Energy Pro 500 г</h3>
             </a>
             <ul class="list product-catalog__card-properties">
               <li class="product-catalog__card-properties-item product-catalog__card-properties-item--weigth">
@@ -259,7 +259,7 @@
           </li>
 
           <li class="product-catalog__card product-catalog__additional-card">
-            <button class="product-catalog__additional-card-show-one-more-button" type="button"><span class="visually-hidden">Показать еще одну карточку</span></button>
+            <button class="link product-catalog__additional-card-show-one-more-button" type="button"><span class="visually-hidden">Показать еще одну карточку</span></button>
             <a class="link product-catalog__card-title-link product-catalog__additional-card-title-link" href="#">
               <h3 class="title product-catalog__card-title product-catalog__additional-card-title">Показать еще 100500 товаров</h3>
             </a>

@@ -143,8 +143,7 @@
     border-bottom: none;
 
     &::before {
-      content: "";
-      content: "";
+      @include empty-content;
       position: absolute;
       left: -70px;
       top: 50%;
@@ -167,10 +166,10 @@
 
     border: 1px solid $secondary-grey-darker;
     border-bottom: none;
-  }
 
-  .additional-products__card:last-of-type {
-    border-bottom: 1px solid $secondary-grey-darker;
+    &:last-of-type {
+      border-bottom: 1px solid $secondary-grey-darker;
+    }
   }
 
   .additional-products__card-title {
@@ -240,13 +239,89 @@
       width: 80px;
       height: 83px;
 
-      background-color: #ffffff;
-      mask: url("../../images/icons/stack.svg#icon-gift") no-repeat center;
       mask-size: 80px 83px;
     }
   }
 
   .additional-products__promo-text-gift {
     margin-top: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    margin-bottom: 15px;
+  }
+
+  .additional-products__list {
+    flex-grow: 1;
+  }
+
+  .additional-products__title {
+    margin-left: 0;
+    margin-bottom: 76px;
+
+    flex-basis: 100%;
+
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+  }
+
+  .additional-products__card {
+    padding: 16px 0 15px 0;
+    align-items: center;
+
+    border: none;
+    border-top: 1px solid $secondary-grey-darker;
+
+    &:last-of-type {
+      border-bottom: 1px solid $secondary-grey-darker;
+    }
+  }
+
+  .additional-products__card-title {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .additional-products__card-properties {
+    min-width: 286px;
+    justify-content: space-between;
+  }
+
+  .additional-products__card-button {
+    flex-basis: auto;
+    min-width: 246px;
+    margin-left: 40px;
+    box-sizing: border-box;
+  }
+
+  .additional-products__promo {
+    width: 245px;
+    height: 288px;
+    padding: 0;
+    margin: 0;
+
+    background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-desktop@1x.png");
+  }
+
+  .additional-products__promo-text {
+    flex-direction: column;
+
+    &::before {
+      margin-top: 16px;
+      margin-bottom: 46px;
+    }
+  }
+
+  .additional-products__promo-text-gift {
+    margin: 0;
+
+    text-align: center;
   }
 }

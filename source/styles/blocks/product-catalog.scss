@@ -34,12 +34,11 @@
 // название карточки
 .product-catalog__card-title-link {
   align-self: start;
+  width: 76px;
 }
 
 .product-catalog__card-title {
   margin: 0;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 8px;
 
   color: $text-secondary-darker-color;
@@ -99,7 +98,9 @@
 }
 
 .product-catalog__additional-card-title-link {
+  width: 100%;
   align-self: center;
+  text-align: center;
 }
 
 .product-catalog__additional-card-show-more-text {
@@ -166,14 +167,11 @@
 
   .product-catalog__card-title-link {
     align-self: inherit;
+    width: 135px;
     margin-bottom: 15px;
   }
 
   .product-catalog__card-title {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 135px;
     margin: 0;
 
     font-size: 20px;
@@ -183,7 +181,7 @@
 
   .product-catalog__product-name {
     &::after {
-      content: ' ';
+      @include empty-content;
       white-space: pre;
     }
   }
@@ -251,5 +249,70 @@
     font-size: 16px;
     line-height: 18px;
     text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-catalog__title {
+    padding: 0;
+    margin-top: 4px;
+    margin-bottom: 55px;
+  }
+
+  .product-catalog__list {
+    column-gap: 80px;
+    row-gap: 36px;
+    margin-bottom: 76px;
+  }
+
+  .product-catalog__card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 245px;
+    padding: 10px 40px 40px 40px;
+    box-sizing: border-box;
+
+    @include background-overlay($basic-grey, 100%, 80%, 0);
+  }
+
+  .product-catalog__card-image-link {
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  .product-catalog__card-title-link {
+    margin-bottom: 16px;
+  }
+
+  .product-catalog__card-properties {
+    margin-bottom: 37px;
+  }
+
+  .product-catalog__card-properties-item {
+    padding-top: 6px;
+    padding-bottom: 5px;
+    margin: 0;
+  }
+
+  .product-catalog__additional-card {
+    @include background-overlay(transparent, 0, 0, 0);
+    margin-top: 105px;
+
+    border: 1px solid $secondary-grey-darker;
+  }
+
+  .product-catalog__additional-card-show-one-more-button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .product-catalog__additional-card-title {
+    margin-bottom: 10px;
+  }
+
+  .product-catalog__additional-card-show-more-text {
+    width: 170px;
   }
 }

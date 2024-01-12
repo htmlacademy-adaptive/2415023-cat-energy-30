@@ -79,13 +79,15 @@
 
 @media (min-width: $desktop-width) {
   .main-navigation__list-link {
-    color: $basic-white;
-
     font-size: 20px;
     line-height: normal;
   }
 
-  .main-navigation__list-link--current {
+  .main-navigation__list--dark-background .main-navigation__list-link {
+    color: $basic-white;
+  }
+
+  .main-navigation__list--dark-background .main-navigation__list-link--current {
     border-bottom: 2px solid $basic-white;
   }
 }
