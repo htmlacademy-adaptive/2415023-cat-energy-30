@@ -1,7 +1,7 @@
-/* в этот файл добавляет скрипты*/
-document.addEventListener("DOMContentLoaded", function() {
-  let menuButtons = document.querySelectorAll('.header__menu-button');
-  let navigation = document.querySelector('.main-navigation__list');
+/* в этот файл добавляет скрипты */
+document.addEventListener('DOMContentLoaded', function() {
+  const menuButtons = document.querySelectorAll('.header__menu-button');
+  const navigation = document.querySelector('.main-navigation__list');
 
   menuButtons.forEach(function(menuButton) {
     menuButton.addEventListener('click', function() {

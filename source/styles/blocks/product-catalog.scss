@@ -204,6 +204,8 @@
   .product-catalog__card-button {
     width: 100%;
     margin: 0;
+    margin-top: auto;
+    box-sizing: border-box;
   }
 
   /* дополнительная карточка */
@@ -232,11 +234,6 @@
       mask: url("../../images/icons/stack.svg#icon-plus") no-repeat center;
       mask-size: 60px 60px;
     }
-  }
-
-  .product-catalog__card-button {
-    margin-top: auto;
-    box-sizing: border-box;
   }
 
   .product-catalog__additional-card-title-link {

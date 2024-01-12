@@ -150,7 +150,7 @@
       margin-top: 7px;
       width: 30px;
       height: 2px;
-      background-color: $company-primary-color;;
+      background-color: $company-primary-color;
       transform: translateY(-50%);
     }
   }
@@ -197,17 +197,17 @@
 
   // промо-блок с подарками
   .additional-products__promo {
-  position: relative;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  height: 200px;
-  padding: 0 125px 20px 77px;
-  margin-bottom: 75px;
-  box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 200px;
+    padding: 0 125px 20px 77px;
+    margin-bottom: 75px;
+    box-sizing: border-box;
 
-  color: $basic-white;
-  text-align: center;
+    color: $basic-white;
+    text-align: center;
 
     &::before {
       @include pseudo-element;
