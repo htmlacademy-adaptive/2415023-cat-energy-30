@@ -4,14 +4,15 @@
 }
 
 .program-selection__title {
-  margin-top: 27px;
-  margin-bottom: 37px;
+  margin-top: 24px;
+  margin-bottom: 35px;
 
   font-size: 36px;
   line-height: 40px;
 }
 
 .program-selection__subtitle {
+  max-width: 226px;
   margin-bottom: 39px;
 
   font-size: 14px;
@@ -22,12 +23,12 @@
 .program-selection__fieldset-wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 14px;
+  row-gap: 12px;
 }
 
 .program-selection__fieldset {
   padding: 0;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   margin: 0;
   border: none;
 
@@ -39,17 +40,18 @@
 
   &--goal {
     padding-top: 22px;
+    padding-bottom: 18px;
 
     border-top: 1px solid $secondary-grey;
     border-bottom: 1px solid $secondary-grey;
   }
 
   &--comment {
-    padding-bottom: 28px;
+    padding-bottom: 24px;
   }
 
   &--supplements {
-    padding-bottom: 34px;
+    padding-bottom: 36px;
   }
 }
 
@@ -65,8 +67,8 @@
   text-transform: none;
 
   &--owner-data {
-    padding-top: 26px;
-    margin-bottom: 35px;
+    padding-top: 24px;
+    margin-bottom: 33px;
 
     @include header-right-line(-20px, 93px, 7px);
   }
@@ -78,7 +80,7 @@
   }
 
   &--supplements {
-    margin-bottom: 34px;
+    margin-bottom: 37px;
   }
 }
 
@@ -129,7 +131,7 @@
   .program-selection__title {
     padding: 0 $tablet-form-padding;
     margin-top: 0;
-    margin-bottom: 54px;
+    margin-bottom: 53px;
 
     font-size: 60px;
     line-height: 60px;
@@ -139,10 +141,14 @@
     max-width: 323px;
     margin-top: 0;
     padding: 0 $tablet-form-padding;
-    margin-bottom: 66px;
+    margin-bottom: 64px;
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .program-selection__fieldset-wrapper {
+    row-gap: 20px;
   }
 
   .program-selection__fieldset {
@@ -152,11 +158,20 @@
     font-size: 20px;
     line-height: normal;
 
+    &--patient-data {
+      margin-bottom: 73px;
+    }
+
     &--goal {
-      padding-top: 22px;
-      padding-bottom: 19px;
+      padding: 22px 25px 26px 25px;
+      margin-left: 41px;
+      margin-right: 40px;
 
       border: 1px solid $secondary-grey;
+    }
+
+    &--supplements {
+      margin-bottom: 54px;
     }
   }
 
@@ -167,7 +182,7 @@
     line-height: 36px;
 
     &--owner-data {
-      margin-bottom: 76px;
+      margin-bottom: 75px;
     }
 
     &--comment {
@@ -175,7 +190,7 @@
     }
 
     &--supplements {
-      margin-bottom: 57px;
+      margin-bottom: 59px;
     }
   }
 
@@ -183,7 +198,7 @@
   .program-selection__comment {
     min-height: 173px;
     width: 100%;
-    padding: 9px 18px;
+    padding: 10px 20px;
     box-sizing: border-box;
 
     font-size: 20px;
@@ -205,6 +220,7 @@
 
   .program-selection__button {
     margin: 0;
+    padding: 14px 15px;
 
     font-size: 20px;
     line-height: 26px;
@@ -214,18 +230,13 @@
     font-size: 16px;
     line-height: 16px;
     text-align: start;
+    align-self: center;
   }
 }
 
 @media (min-width: $desktop-width) {
   .program-selection {
     margin-bottom: 79px;
-  }
-
-  .program-selection__main-info-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 80px;
   }
 
   .program-selection__title {
@@ -235,7 +246,13 @@
 
   .program-selection__subtitle {
     padding: 0;
-    margin-bottom: 76px;
+    margin-bottom: 66px;
+  }
+
+  .program-selection__main-info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
   }
 
   .program-selection__fieldset {
@@ -243,9 +260,19 @@
     margin-bottom: 70px;
 
     &--goal {
-      padding: 30px 28px;
+      height: min-content;
+      padding: 26px 16px 23px 28px;
+      margin: 0;
 
       grid-column: 2;
+    }
+
+    &--comment {
+      margin-bottom: 68px;
+    }
+
+    &--supplements {
+      margin-bottom: 63px;
     }
   }
 
@@ -273,7 +300,8 @@
   }
 
   .program-selection__comment {
-    padding: 7px 18px;
+    height: 178px;
+    padding: 9px 19px;
   }
 
   .program-selection__additional-wrapper {

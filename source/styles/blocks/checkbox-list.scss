@@ -1,13 +1,15 @@
 .checkbox-list {
   display: flex;
   flex-direction: column;
-  row-gap: 14px;
+  row-gap: 16px;
+
+  margin-left: 2px;
 }
 
 .checkbox-list__item {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 17px;
 }
 
 .checkbox-list__checkbox-cell {
@@ -29,7 +31,7 @@
   .checkbox-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 32px;
+    row-gap: 36px;
     column-gap: 60px;
   }
 
@@ -37,11 +39,15 @@
     min-width: 36px;
     min-height: 36px;
   }
+
+  .checkbox-list__item {
+    gap: 22px;
+  }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .checkbox-list {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
+    grid-template-columns: repeat(4, 300px);
+    column-gap: 25px;
   }
 }
