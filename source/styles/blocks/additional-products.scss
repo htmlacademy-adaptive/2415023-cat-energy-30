@@ -16,15 +16,7 @@
 
   border-bottom: 1px solid $secondary-grey-darker;
 
-  &::after {
-    @include pseudo-element;
-    margin: 7px -20px 0 20px;
-    flex-grow: 1;
-
-    height: 2px;
-
-    background-color: $company-primary-color;
-  }
+  @include header-right-line(-20px, 54px, -3px);
 }
 
 //Список дополнительных продуктов
@@ -142,17 +134,8 @@
 
     border-bottom: none;
 
-    &::before {
-      @include empty-content;
-      position: absolute;
-      left: -70px;
-      top: 50%;
-      margin-top: 7px;
-      width: 30px;
-      height: 2px;
-      background-color: $company-primary-color;
-      transform: translateY(-50%);
-    }
+    @include header-left-line(-70px, 30px, 5px);
+    @include header-right-line(-30px, 320px, 5px);
   }
 
   .additional-products__list {

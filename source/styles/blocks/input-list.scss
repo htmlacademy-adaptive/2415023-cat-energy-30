@@ -1,41 +1,67 @@
 .input-list {
-
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
 }
 
 .input-list__input {
+  display: flex;
+  position: relative;
+  align-items: center;
 
+  overflow: hidden;
+
+  &::before {
+    @include pseudo-element;
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+    background-color: $basic-black;
+
+    mask: var(--social-icon) no-repeat center;
+  }
+
+  &--no-icon {
+    --social-icon: url("../../images/icons/stack.svg#no-icon");
+  }
+
+  &--owner-email {
+    --social-icon: url("../../images/icons/stack.svg#icon-email");
+  }
+
+  &--owner-phone {
+    --social-icon: url("../../images/icons/stack.svg#icon-phone");
+  }
 }
 
 .input-list__input-label {
-
+  white-space: nowrap;
+  margin-right: 13px;
 }
 
 .input-list__input-field {
+  padding: 11px 20px 10px 15px;
+  width: 10px; /* коммент - неважно сколько тут задать - инпут не выпадает за родителя. а если убрать - выпадает*/
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  appearance: textfield;
+
   color: $text-secondary-color;
   font-family: $secondary-font-family;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
-// данные кота
-.input-list__input--patient-name {
-
-}
-
-.input-list__input--patient-weight {
-
-}
-
-.input-list__input--patient-age {
-
-}
-
-// данные владельца
-.input-list__input--owner-name {
-
-}
-
-.input-list__input--owner-phone {
-
+@media (min-width: $tablet-width) {
+  .input-list__input-field {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

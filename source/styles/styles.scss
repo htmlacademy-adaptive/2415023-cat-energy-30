@@ -35,8 +35,8 @@
 /* form */
 @import "./blocks/program-selection.scss";
 @import "./blocks/input-list.scss";
-// @import "./blocks/radio-list.scss";
-// @import "./blocks/checkbox-list.scss";
+@import "./blocks/radio-list.scss";
+@import "./blocks/checkbox-list.scss";
 
 /* коммент -заметка что еще нужно сделать:
 1) убрать запятую и "block-no-empty": null  в файле .stylelintrc

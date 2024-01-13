@@ -1,15 +1,26 @@
 .checkbox-list {
-
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
 }
 
 .checkbox-list__item {
-
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .checkbox-list__checkbox-cell {
+  appearance: none;
+  min-width: 26px;
+  min-height: 26px;
+  margin: 0;
 
-}
+  background-color: #ffffff;
+  outline: 2px solid $secondary-grey-darker;
 
-.checkbox-list__checkbox-description {
-
+  &:checked {
+    background-image: url("../../images/icons/stack.svg#icon-tick");
+    background-repeat: no-repeat;
+  }
 }

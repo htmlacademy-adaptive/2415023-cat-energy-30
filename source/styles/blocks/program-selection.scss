@@ -1,98 +1,180 @@
 .program-selection {
-
+  @include container-item(0);
+  margin-bottom: 32px;
 }
 
 .program-selection__title {
-  font-size: 60px;
-  line-height: 60px;
+  margin-top: 27px;
+  margin-bottom: 37px;
+
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .program-selection__subtitle {
-  font-size: 20px;
-  line-height: 30px;
+  margin-bottom: 39px;
+
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
-.program-selection__form {
-
-}
-
 .program-selection__fieldset {
+  padding: 0;
+  padding-bottom: 24px;
+  margin: 0;
   border: none;
 
   color: $text-secondary-color;
   font-family: $secondary-font-family;
-  font-size: 20px;
-  line-height: normal;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+
+  border-bottom: 1px solid $secondary-grey;
+
+  &--owner-data {
+    border-bottom: none;
+  }
+
+  &--goal {
+    padding-top: 22px;
+  }
+
+  &--comment {
+    padding-bottom: 28px;
+
+    border-bottom: none;
+  }
+
+  &--supplements {
+    padding-bottom: 34px;
+
+    border-bottom: none;
+  }
 }
 
 .program-selection__fieldset-legend {
+  display: block;
+  width: 100%;
+  position: relative;
   padding: 0;
 
   color: $basic-black;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 26px;
   text-transform: none;
-}
 
-.program-selection__fieldset-wrapper {
+  &--owner-data {
+    padding-top: 26px;
+    margin-bottom: 35px;
 
-}
+    @include header-right-line(-20px, 93px, 7px);
+  }
 
-.program-selection__obligatory-caption {
-  font-size: 16px;
-  line-height: 16px;
+  &--сomment {
+    margin-bottom: 38px;
+
+    @include header-right-line(-20px, 159px, 2px);
+  }
+
+  &--supplements {
+    margin-bottom: 34px;
+  }
 }
 
 // textarea
 .program-selection__comment {
+  width: 280px;
+  min-height: 150px;
+  box-sizing: border-box;
+
   font-family: $secondary-font-family;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 
   &::placeholder {
     font-family: $secondary-font-family;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 18px;
     text-transform: uppercase;
   }
 }
 
-
 // кнопка формы
 .program-selection__button {
-  font-size: 20px;
-  line-height: 26px;
+  width: 100%;
+  margin-bottom: 21px;
+
+  font-size: 16px;
+  line-height: 20px;
 }
 
-// модификаторы формы
-// данные кота
-.program-selection__fieldset--patient-data {
+.program-selection__obligatory-caption {
+  display: block;
 
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
 
-
-// цель обращения
-.program-selection__fieldset--goal {
-
+.program-selection__fieldset-legend--no-display {
+  display: none;
 }
 
+@media (min-width: $tablet-width) {
+  .program-selection__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
 
-// данные владельца
-.program-selection__fieldset--owner-data {
+  .program-selection__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
 
-}
+  .program-selection__fieldset {
+    color: $text-secondary-color;
+    font-family: $secondary-font-family;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
 
+  .program-selection__fieldset-legend {
+    padding: 0;
 
-// комментарий
-.program-selection__fieldset--comment {
+    color: $basic-black;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: none;
+  }
 
-}
+  .program-selection__obligatory-caption {
+    font-size: 16px;
+    line-height: 16px;
+  }
 
+  // textarea
+  .program-selection__comment {
+    font-family: $secondary-font-family;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
 
-// дополнительные продукты
-.program-selection__fieldset--supplements {
+    &::placeholder {
+      font-family: $secondary-font-family;
+      font-size: 20px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+  }
 
+  // кнопка формы
+  .program-selection__button {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

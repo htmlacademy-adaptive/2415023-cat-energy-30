@@ -35,6 +35,40 @@
   }
 }
 
+/* линии заголовков */
+@mixin header-line {
+  @include pseudo-element;
+  position: absolute;
+  top: 50%;
+
+  height: 2px;
+
+  background-color: $company-primary-color;
+}
+
+@mixin header-left-line($left, $width, $margin-top) {
+  &::before {
+    @include header-line;
+
+    left: $left;
+
+    width: $width;
+    margin-top: $margin-top;
+  }
+}
+
+@mixin header-right-line($right, $width, $margin-top) {
+  &::after {
+    @include header-line;
+
+    right: $right;
+
+    width: $width;
+    margin-top: $margin-top;
+  }
+}
+
+
 /* контейнеры */
 @mixin container-item($padding: 20px) {
   width: 280px;
