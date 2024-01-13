@@ -25,3 +25,10 @@
     background-repeat: no-repeat;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .radio-list__button {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}

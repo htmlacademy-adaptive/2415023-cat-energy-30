@@ -1,9 +1,3 @@
-.input-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 14px;
-}
-
 .input-list__input {
   display: flex;
   position: relative;
@@ -46,7 +40,7 @@
 
 .input-list__input-field {
   padding: 11px 20px 10px 15px;
-  width: 10px; /* коммент - неважно сколько тут задать - инпут не выпадает за родителя. а если убрать - выпадает*/
+  width: 100%;
   flex-grow: 1;
   box-sizing: border-box;
 

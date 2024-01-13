@@ -19,6 +19,12 @@
   text-transform: uppercase;
 }
 
+.program-selection__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
 .program-selection__fieldset {
   padding: 0;
   padding-bottom: 24px;
@@ -31,26 +37,19 @@
   line-height: 18px;
   text-transform: uppercase;
 
-  border-bottom: 1px solid $secondary-grey;
-
-  &--owner-data {
-    border-bottom: none;
-  }
-
   &--goal {
     padding-top: 22px;
+
+    border-top: 1px solid $secondary-grey;
+    border-bottom: 1px solid $secondary-grey;
   }
 
   &--comment {
     padding-bottom: 28px;
-
-    border-bottom: none;
   }
 
   &--supplements {
     padding-bottom: 34px;
-
-    border-bottom: none;
   }
 }
 
@@ -72,7 +71,7 @@
     @include header-right-line(-20px, 93px, 7px);
   }
 
-  &--сomment {
+  &--comment {
     margin-bottom: 38px;
 
     @include header-right-line(-20px, 159px, 2px);
@@ -85,9 +84,12 @@
 
 // textarea
 .program-selection__comment {
+  min-height: 148px;
   width: 280px;
-  min-height: 150px;
+  padding: 12px 13px;
   box-sizing: border-box;
+
+  border: 1px solid #e6e6e6;
 
   font-family: $secondary-font-family;
   font-size: 16px;
@@ -119,62 +121,166 @@
   text-align: center;
 }
 
-.program-selection__fieldset-legend--no-display {
-  display: none;
-}
-
 @media (min-width: $tablet-width) {
+  .program-selection {
+    margin-bottom: 60px;
+  }
+
   .program-selection__title {
+    padding: 0 $tablet-form-padding;
+    margin-top: 0;
+    margin-bottom: 54px;
+
     font-size: 60px;
     line-height: 60px;
   }
 
   .program-selection__subtitle {
+    max-width: 323px;
+    margin-top: 0;
+    padding: 0 $tablet-form-padding;
+    margin-bottom: 66px;
+
     font-size: 20px;
     line-height: 30px;
-    text-transform: uppercase;
   }
 
   .program-selection__fieldset {
-    color: $text-secondary-color;
-    font-family: $secondary-font-family;
+    padding: 0 $tablet-form-padding;
+    margin-bottom: 65px;
+
     font-size: 20px;
     line-height: normal;
-    text-transform: uppercase;
+
+    &--goal {
+      padding-top: 22px;
+      padding-bottom: 19px;
+
+      border: 1px solid $secondary-grey;
+    }
   }
 
   .program-selection__fieldset-legend {
     padding: 0;
 
-    color: $basic-black;
     font-size: 36px;
     line-height: 36px;
-    text-transform: none;
+
+    &--owner-data {
+      margin-bottom: 76px;
+    }
+
+    &--comment {
+      margin-bottom: 87px;
+    }
+
+    &--supplements {
+      margin-bottom: 57px;
+    }
+  }
+
+  // textarea
+  .program-selection__comment {
+    min-height: 173px;
+    width: 100%;
+    padding: 9px 18px;
+    box-sizing: border-box;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  // кнопка формы
+  .program-selection__additional-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    padding: 0 $tablet-form-padding;
+  }
+
+  .program-selection__button {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .program-selection__obligatory-caption {
     font-size: 16px;
     line-height: 16px;
+    text-align: start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-selection {
+    margin-bottom: 79px;
   }
 
-  // textarea
-  .program-selection__comment {
-    font-family: $secondary-font-family;
-    font-size: 20px;
-    line-height: 30px;
-    text-transform: uppercase;
+  .program-selection__main-info-container {
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
 
-    &::placeholder {
-      font-family: $secondary-font-family;
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: uppercase;
+  .program-selection__title {
+    padding: 0;
+    margin-bottom: 55px;
+  }
+
+  .program-selection__subtitle {
+    padding: 0;
+    margin-bottom: 76px;
+  }
+
+  .program-selection__fieldset {
+    padding: 0;
+    margin-bottom: 70px;
+
+    &--goal {
+      padding: 30px 28px;
+
+      grid-column: 2;
     }
   }
 
-  // кнопка формы
-  .program-selection__button {
-    font-size: 20px;
-    line-height: 26px;
+  .program-selection__fieldset-legend {
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &--comment {
+      margin-bottom: 78px;
+    }
+
+    &--supplements {
+      margin-bottom: 57px;
+    }
+  }
+
+  .program-selection__fieldset-wrapper {
+    &--owner-data {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 80px;
+    }
+  }
+
+  .program-selection__comment {
+    padding: 7px 18px;
+  }
+
+  .program-selection__additional-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    padding: 0;
   }
 }

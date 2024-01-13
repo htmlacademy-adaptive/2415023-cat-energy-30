@@ -6,7 +6,6 @@
 
 /* BLOCKS */
 /* общие блоки */
-@import "./blocks/visually-hidden.scss";
 @import "./blocks/title.scss";
 @import "./blocks/link.scss";
 @import "./blocks/button.scss";
@@ -38,7 +37,16 @@
 @import "./blocks/radio-list.scss";
 @import "./blocks/checkbox-list.scss";
 
+/* visually-hidden */
+@import "./blocks/visually-hidden.scss";
+
 /* коммент -заметка что еще нужно сделать:
 1) убрать запятую и "block-no-empty": null  в файле .stylelintrc
 2) исправить рамку на "60 дней" на другую для таблета и десктопа
+3) добавить медиа выражение для ретины - min-rezolution 2dppx - 3 глава учебника
+4) активные состояния
+5) hero скачать бекграунд картинку
+6) банку переиспользовать картинку
+7) кнопка слайдера поменять
+8) зеленые полосы поменять
 */

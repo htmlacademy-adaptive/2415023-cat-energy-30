@@ -94,6 +94,16 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .additional-products__promo {
+
+    &::before {
+      background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-mobile@2x.png");
+    }
+  }
+}
+
+
 .additional-products__promo-text {
   display: flex;
   flex-direction: column;
@@ -204,6 +214,15 @@
     }
   }
 
+  @media (min-resolution: 2dppx) {
+    .additional-products__promo {
+
+      &::before {
+        background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-tablet@2x.png");
+      }
+    }
+  }
+
   .additional-products__promo-text {
     display: flex;
     flex-direction: row;
@@ -291,6 +310,15 @@
     margin: 0;
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-desktop@1x.png");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .additional-products__promo {
+
+      &::before {
+        background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-desktop@2x.png");
+      }
+    }
   }
 
   .additional-products__promo-text {

@@ -24,3 +24,24 @@
     background-repeat: no-repeat;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .checkbox-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+    column-gap: 60px;
+  }
+
+  .checkbox-list__checkbox-cell {
+    min-width: 36px;
+    min-height: 36px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .checkbox-list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+  }
+}

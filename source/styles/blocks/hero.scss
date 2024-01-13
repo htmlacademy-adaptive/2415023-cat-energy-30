@@ -29,6 +29,15 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .hero {
+
+    &::before {
+      background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/hero-background-mobile@2x.jpg");
+    }
+  }
+}
+
 .hero__title {
   margin: 0;
   margin-bottom: 25px;
@@ -135,6 +144,15 @@
       background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/hero-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero {
+
+      &::before {
+        background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/hero-background-desktop@2x.jpg");
+      }
     }
   }
 
