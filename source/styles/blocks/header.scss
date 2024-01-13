@@ -17,6 +17,14 @@
   justify-content: space-between;
   align-items: center;
   flex: 0 0 66%;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .header__company-logo-text {

@@ -24,6 +24,24 @@
     background-image: url("../../images/icons/stack.svg#radiobutton-checked");
     background-repeat: no-repeat;
   }
+
+  &:disabled {
+    opacity: 0.3;
+    outline: 1px solid $radio-button-hover;
+  }
+
+  &:hover {
+    outline: 1px solid $radio-button-hover;
+  }
+
+  &:focus {
+    @include box-shadow;
+    outline: 1px solid $company-primary-color-darker;
+  }
+}
+
+.radio-list__button:disabled + .radio-list__button-description {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {

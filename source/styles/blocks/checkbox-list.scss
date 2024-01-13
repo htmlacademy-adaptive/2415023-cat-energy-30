@@ -19,13 +19,32 @@
   margin: 0;
 
   background-color: #ffffff;
-  outline: 2px solid $secondary-grey-darker;
+  outline: 1px solid $secondary-grey-darker;
 
   &:checked {
     background-image: url("../../images/icons/stack.svg#icon-tick");
     background-repeat: no-repeat;
   }
+
+  &:disabled {
+    opacity: 0.3;
+    outline: 1px solid $radio-button-hover;
+  }
+
+  &:hover {
+    outline: 1px solid $radio-button-hover;
+  }
+
+  &:focus {
+    @include box-shadow;
+    outline: 1px solid $company-primary-color-darker;
+  }
 }
+
+.checkbox-list__checkbox-cell:disabled + .checkbox-list__checkbox-description {
+  opacity: 0.3;
+}
+
 
 @media (min-width: $tablet-width) {
   .checkbox-list {

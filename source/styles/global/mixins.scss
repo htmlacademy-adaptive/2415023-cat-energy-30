@@ -98,3 +98,13 @@
 
   border-bottom: $border;
 }
+
+
+/* офорление */
+@mixin box-shadow ($color: $company-primary-color) {
+  box-shadow: 0 0 15px $color;
+}
+
+@mixin focus-outline ($color: $company-primary-color) {
+  outline: 2px solid $color;
+}

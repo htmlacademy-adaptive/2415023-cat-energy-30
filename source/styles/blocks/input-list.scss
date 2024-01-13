@@ -31,7 +31,24 @@
   &--owner-phone {
     --social-icon: url("../../images/icons/stack.svg#icon-phone");
   }
+
+  &:focus-within {
+    &::before {
+      background-color: $company-primary-color;
+    }
+  }
+
+  &--error {
+    &::before {
+      background-color: $error-color;
+    }
+  }
+
+  &--error .input-list__input-field {
+    border: 2px solid $error-color;
+  }
 }
+
 
 .input-list__input-label {
   white-space: nowrap;
@@ -46,11 +63,22 @@
 
   appearance: textfield;
 
+  outline: none;
+  border: 2px solid $input-border-grey;
+
   color: $text-secondary-color;
   font-family: $secondary-font-family;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  &:hover {
+    border: 2px solid $secondary-grey-darker;
+  }
+
+  &:focus {
+    border: 2px solid $text-secondary-color;
+  }
 }
 
 @media (min-width: $tablet-width) {

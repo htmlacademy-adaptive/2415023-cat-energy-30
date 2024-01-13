@@ -1,5 +1,6 @@
 .main-navigation__list {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   flex-direction: column;
   text-align: center;
@@ -32,6 +33,14 @@
 .main-navigation__list-link {
   font-size: 20px;
   line-height: 20px;
+
+  &:focus {
+    @include box-shadow;
+    @include focus-outline($company-primary-color-more-dark);
+
+    padding: 5px 10px;
+    margin: -5px -10px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -40,6 +49,7 @@
     display: flex;
     width: auto;
     flex-direction: row;
+    margin-left: 40px;
     gap: 33px;
 
     transform: translateX(0);
@@ -49,6 +59,8 @@
 
   .main-navigation__list-item {
     padding: 0;
+
+    white-space: nowrap;
 
     &::before {
       position: fixed;

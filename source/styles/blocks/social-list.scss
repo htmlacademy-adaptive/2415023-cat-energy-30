@@ -1,13 +1,15 @@
 .social-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 5px;
 }
 
-.social-list__item {
+.social-list__link {
   display: flex;
   width: 28px;
   height: 22px;
+  padding: 5px 10px;
+
   justify-content: center;
   align-items: center;
 
@@ -19,6 +21,7 @@
     background-color: $special-grey;
 
     mask: var(--social-icon) no-repeat center;
+    mask-size: 28px 22px;
   }
 
   &:hover::before {

@@ -104,6 +104,10 @@
     line-height: 18px;
     text-transform: uppercase;
   }
+
+  &:focus {
+    @include focus-outline;
+  }
 }
 
 // кнопка формы

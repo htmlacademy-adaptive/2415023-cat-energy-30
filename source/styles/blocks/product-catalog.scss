@@ -124,6 +124,24 @@
   line-height: 20px;
 
   background-color: $basic-grey;
+
+  &:hover {
+    background-color: $basic-lighter-grey;
+  }
+
+  &:focus {
+    background-color: $basic-lighter-grey;
+    outline: 2px solid $text-secondary-color;
+
+    @include box-shadow($secondary-grey-darker);
+  }
+
+  &:active,
+  &:active > * {
+    outline: none;
+    box-shadow: none;
+    opacity: 1;
+  }
 }
 
 

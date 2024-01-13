@@ -36,6 +36,18 @@
     background-color: $special-grey;
     mask: url("../../images/logo-html-academy.svg") no-repeat center;
   }
+
+  &:hover {
+    opacity: 1;
+
+    &::after {
+      background-color: $company-primary-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__copyright-name {

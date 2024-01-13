@@ -119,6 +119,20 @@
     background-color: $basic-black;
     mask: url("../../images/icons/stack.svg#icon-arrow") no-repeat center;
   }
+
+  &:hover {
+    opacity: 1;
+
+    &::after {
+      mask: url("../../images/icons/stack.svg#icon-arrow-active") no-repeat center;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    outline: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

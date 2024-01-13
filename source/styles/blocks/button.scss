@@ -9,4 +9,28 @@
   border: none;
   text-decoration: none;
   background-color: $company-primary-color;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    background-color: $company-primary-color-darker;
+  }
+
+  &:focus {
+    opacity: 1;
+    background-color: $company-primary-color-darker;
+
+    @include box-shadow;
+    @include focus-outline($company-primary-color-more-dark);
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $secondary-grey-lighter;
+    background-color: $basic-additional-grey;
+  }
+}
+
+.button:active > * {
+  opacity: 0.3;
 }
