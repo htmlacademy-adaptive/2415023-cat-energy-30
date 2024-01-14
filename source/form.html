@@ -18,11 +18,11 @@
         <picture class="header__logo-container">
           <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
           <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-          <img class="header__company-logo-image logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat Energy.">
+          <img class="header__company-logo-image logo__image" width="33" height="38" src="images/logo-mobile.svg" alt="Логотип компании Cat Energy.">
         </picture>
         <picture class="header__logo-container">
           <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
-          <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+          <img class="header__company-logo-text logo__text" width="101" height="18" src="images/logo-text.svg"alt="Cat Energy.">
         </picture>
       </a>
       <button class="button header__menu-button header__menu-button--closed" type="button"><!-- модификатор opened/closed - для открытой/закрытой навигации -->
@@ -148,14 +148,21 @@
         </div>
         <div class="contacts__map-wrapper">
           <picture class="contacts__map">
+            <source width="1440" height="400" type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x">
+            <source width="768" height="400" type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x">
+            <source width="320" height="362" type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x">
+
             <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x">
             <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
-            <img class="contacts__map-image" src="images/map-mobile@1x.png" width="320" height="362" alt="Карта Санкт-Петербурга с адресом главного офиса компании Cat energy.">
+            <img class="contacts__map-image" width="320" height="362" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" alt="Карта Санкт-Петербурга с адресом главного офиса компании Cat energy.">
           </picture>
           <iframe class="contacts__map-frame" src="https://maps.google.com/maps?q=%D0%92%D0%BE%D0%BB%D1%8B%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D1%80.,%208&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
           <picture class="contacts__map-pin">
+            <source width="113" height="106" type="image/webp" media="(min-width: 768px)" srcset="images/map-pin@1x.webp 1x, images/map-pin@2x.webp 2x">
+            <source width="57" height="53" type="image/webp" srcset="images/map-pin@1x.webp 1x, images/map-pin@2x.webp 2x">
+
             <source width="113" height="106" type="image/png" media="(min-width: 768px)" srcset="images/map-pin@1x.png 1x, images/map-pin@2x.png 2x">
-            <img class="contacts__map-pin-image" src="images/map-pin@1x.png" width="57" height="53" alt="Пин главного офиса компании Cat energy на карте Санкт-Петербурга.">
+            <img class="contacts__map-pin-image" width="57" height="53" src="images/map-pin@1x.png" srcset="images/map-pin@2x.png 2x" alt="Пин главного офиса компании Cat energy на карте Санкт-Петербурга.">
           </picture>
         </div>
       </section>
@@ -163,7 +170,7 @@
 
     <footer class="main-footer">
       <a class="link main-footer__logo-wrapper logo" href="index.html" aria-current="page">
-        <img class="main-footer__logo logo__text" src="images/logo-text.svg" width="128" height="24" alt="Cat Energy.">
+        <img class="main-footer__logo logo__text" width="128" height="24" src="images/logo-text.svg" alt="Cat Energy.">
       </a>
       <ul class="list main-footer__social-list social-list">
         <li class="social-list__item social-list__item--vk">
