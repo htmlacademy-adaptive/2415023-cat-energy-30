@@ -34,9 +34,35 @@
   align-self: center;
 }
 
+.contacts__map-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 362px;
+}
+
 .contacts__map-image {
   display: block;
   object-fit: cover;
+  width: 100vw;
+}
+
+.contacts__map-frame {
+  display: block;
+  position: absolute;
+  top: 0;
+
+  width: 100vw;
+  height: 100%;
+
+  border: none;
+}
+
+.contacts__map-pin {
+  position: absolute;
+
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -67,6 +93,18 @@
 
     font-size: 16px;
     text-align: end;
+  }
+
+  .contacts__map-wrapper {
+    height: 400px;
+  }
+
+  .contacts__map-pin {
+    position: absolute;
+
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

@@ -89,6 +89,19 @@
   }
 }
 
+/* фоновые палки слайдера*/
+@mixin slider-curtain ($height: 106px) {
+  @include pseudo-element;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 4px;
+  height: $height;
+
+  background-color: $special-grey;
+}
+
 /* элемент футера */
 @mixin footer-item ($justify-content, $border) {
   display: flex;

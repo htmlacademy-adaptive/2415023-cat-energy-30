@@ -95,52 +95,60 @@
 
 //Слайдер
 .operation-example__slider {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  width: 280px;
 }
 
-.operation-example__slider-picture {
-  width: 100%;
-  height: auto;
+.operation-example__slider-wrapper {
+  display: inline-block;
+  width: 140px;
+
+  position: relative;
+}
+
+.operation-example__slider-picture-wrapper {
+  overflow: hidden;
+}
+
+.operation-example__slider-picture-wrapper--after {
+  display: flex;
+  justify-content: end;
 }
 
 .operation-example__slider-image {
-  width: 100%;
-  height: 100%;
+  width: 140px;
+  height: auto;
   object-fit: cover;
 }
 
 .operation-example__slider-button {
   position: absolute;
-  width: 4px;
-  height: 100%;
-  left: 50%;
-  transform: translate(-50%);
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  box-sizing: content-box;
 
   padding: 0;
-  border: none;
-  background-color: $special-grey;
-  border-radius: 2px;
+
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid $special-grey;
+
+  background-image: url("../../images/icons/stack.svg#icon-slider-pointers");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 18px;
+
+  &::before {
+    @include slider-curtain;
+    top: 40px;
+  }
 
   &::after {
-    @include pseudo-element;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 36px;
-    height: 36px;
-
-    background-color: $basic-white;
-    border-radius: 50%;
-    border: 2px solid $special-grey;
-
-    background-image: url("../../images/icons/stack.svg#icon-slider-pointers");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 24px 18px;
+    @include slider-curtain;
+    bottom: 40px;
   }
 }
 
@@ -222,21 +230,30 @@
 
   /* слайдер */
   .operation-example__slider {
+    display: flex;
     width: 560px;
-    height: 512px;
   }
 
   .operation-example__slider-wrapper {
-    display: grid;
-    overflow: hidden;
-  }
-
-  .operation-example__slider-picture--after {
-    transform: translateX(-50%);
+    width: 280px;
   }
 
   .operation-example__slider-image {
-    width: auto;
+    width: 560px;
+  }
+
+  .operation-example__slider-button {
+    top: 50%;
+
+    &::before {
+      @include slider-curtain(234px);
+      top: 40px;
+    }
+
+    &::after {
+      @include slider-curtain(234px);
+      bottom: 40px;
+    }
   }
 }
 
@@ -285,11 +302,11 @@
     gap: 65px;
   }
 
-  .operation-example__slider {
-    justify-self: end;
-    align-self: self-start;
+  // .operation-example__slider {
+  //   justify-self: end;
+  //   align-self: self-start;
 
-    grid-row: 1 / 4;
-    grid-column: 2;
-  }
+  //   grid-row: 1 / 4;
+  //   grid-column: 2;
+  // }
 }
