@@ -42,8 +42,9 @@
 
 .contacts__map-image {
   display: block;
-  object-fit: cover;
   width: 100vw;
+
+  object-fit: cover;
 }
 
 .contacts__map-frame {
@@ -58,11 +59,18 @@
 }
 
 .contacts__map-pin {
+  display: block;
   position: absolute;
+  width: 57px;
+  height: 53px;
 
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.contacts__map-pin-image {
+  @include image-stabilization;
 }
 
 
@@ -100,7 +108,8 @@
   }
 
   .contacts__map-pin {
-    position: absolute;
+    width: 113px;
+    height: 106px;
 
     top: 40%;
     left: 50%;

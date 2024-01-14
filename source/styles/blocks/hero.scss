@@ -27,6 +27,10 @@
     background-size: cover;
     background-position: center;
   }
+
+  .hero__image {
+    @include image-stabilization;
+  }
 }
 
 @media (min-resolution: 2dppx) {
@@ -150,7 +154,7 @@
     position: static;
     min-height: 465px;
     padding: 0 80px;
-    margin-top: 40px;
+    margin-top: 38px;
     margin-bottom: 84px;
 
     display: grid;
@@ -188,17 +192,19 @@
   }
 
   .hero__image-container {
+    display: block;
     position: relative;
+    width: 552px;
   }
 
   .hero__image {
     position: absolute;
-    top: -85px;
-    right: -25px;
+    top: -82px;
+    right: 118px;
   }
 
   .hero__subtitle {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
   }
 
   .hero__button {

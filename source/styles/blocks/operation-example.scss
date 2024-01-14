@@ -47,19 +47,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  // &::after {
-  //   @include pseudo-element;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 50%;
-  //   transform: translate(-50%);
-  //   width: 124px;
-  //   height: 56px;
-
-  //   background: url("../../images/icons/stack.svg#icon-frame") no-repeat center;
-  //   background-size: 100%;
-  // }
 }
 
 .operation-example__item-number {

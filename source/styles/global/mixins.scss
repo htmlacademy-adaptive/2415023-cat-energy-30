@@ -19,6 +19,19 @@
   display: block;
 }
 
+/* стабилизация изображения */
+@mixin image-stabilization {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@mixin image-stabilization-height {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
 /* фоновый цвет во весь блок */
 @mixin background-overlay($color, $width: 100vw, $height: 100%, $left: calc(-50vw + 50%)) {
   &::after {
