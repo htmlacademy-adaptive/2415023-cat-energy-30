@@ -30,32 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
   let isDragging = false;
   let startX = 0;
 
-  sliderButton.addEventListener('mousedown', function (event) {
+  sliderButton.addEventListener('mousedown', (event) => {
     event.preventDefault();
     isDragging = true;
     startX = event.clientX;
   });
 
-  document.addEventListener('mousemove', function (event) {
+  document.addEventListener('mousemove', (event) => {
     if (isDragging) {
       const deltaX = event.clientX - startX;
 
       const newWidthBefore = Math.min(Math.max(sliderWrapperBefore.offsetWidth + deltaX * 1, 0), slider.offsetWidth);
       const newWidthAfter = slider.offsetWidth - newWidthBefore;
 
-      sliderWrapperBefore.style.width = newWidthBefore + 'px';
-      sliderWrapperAfter.style.width = newWidthAfter + 'px';
+      sliderWrapperBefore.style.width = `${newWidthBefore}px`;
+      sliderWrapperAfter.style.width = `${newWidthAfter}px`;
 
       startX = event.clientX;
     }
   });
 
-  document.addEventListener('mouseup', function () {
+  document.addEventListener('mouseup', () => {
     isDragging = false;
   });
 
   // Добавлен обработчик для предотвращения выделения текста при перетаскивании
-  document.addEventListener('selectstart', function (event) {
+  document.addEventListener('selectstart', (event) => {
     if (isDragging) {
       event.preventDefault();
     }
