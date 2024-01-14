@@ -66,7 +66,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 290px;
+  min-height: 290px;
   margin-top: 37px;
   margin-bottom: 35px;
 
@@ -86,7 +86,7 @@
     height: 100%;
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-mobile@1x.png");
-    background-repeat: no-repeat no-repeat no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -99,7 +99,6 @@
     }
   }
 }
-
 
 .additional-products__promo-text {
   display: flex;
@@ -127,6 +126,8 @@
 
 .additional-products__promo-text-gift {
   max-width: 161px;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
@@ -188,7 +189,7 @@
     display: flex;
     align-items: start;
     justify-content: center;
-    height: 200px;
+    min-height: 200px;
     padding: 0 125px 20px 77px;
     margin-bottom: 75px;
     box-sizing: border-box;
@@ -198,13 +199,12 @@
 
     &::before {
       @include pseudo-element;
-      position: absolute;
-      top: 0;
       width: 100%;
 
-      z-index: -1;
-
       background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
 
@@ -298,11 +298,14 @@
 
   .additional-products__promo {
     width: 245px;
-    height: 288px;
+    min-height: 288px;
     padding: 0;
     margin: 0;
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   @media (min-resolution: 2dppx) {

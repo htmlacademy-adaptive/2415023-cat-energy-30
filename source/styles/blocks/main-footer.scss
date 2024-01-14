@@ -19,6 +19,7 @@
 .main-footer__copyright {
   @include footer-item(space-between, none);
 
+  gap: 23px;
   align-items: center;
 
   color: $text-secondary-color;
@@ -30,7 +31,7 @@
   &::after {
     @include pseudo-element;
 
-    width: 27px;
+    min-width: 27px;
     height: 34px;
 
     background-color: $special-grey;
@@ -83,10 +84,6 @@
 
   .main-footer__social-list {
     margin-left: 35px;
-  }
-
-  .main-footer__copyright {
-    gap: 23px;
   }
 }
 

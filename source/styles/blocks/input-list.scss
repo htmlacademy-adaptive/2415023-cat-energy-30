@@ -1,7 +1,7 @@
 .input-list__input {
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: start;
 
   overflow: hidden;
 
@@ -9,7 +9,7 @@
     @include pseudo-element;
     position: absolute;
 
-    top: 50%;
+    top: 23px;
     right: 13px;
     transform: translateY(-50%);
 
@@ -49,14 +49,16 @@
   }
 }
 
-
 .input-list__input-label {
-  white-space: nowrap;
+  max-width: 100px;
   margin-right: 13px;
+
+  align-self: center;
+  word-wrap: break-word;
 }
 
 .input-list__input-field {
-  padding: 10px 20px 9px 15px;
+  padding: 10px 40px 9px 15px;
   width: 100%;
   flex-grow: 1;
   box-sizing: border-box;
@@ -82,8 +84,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .input-list__input {
+    &::before {
+      top: 27px;
+    }
+  }
+
+  .input-list__input-label {
+    max-width: 200px;
+  }
+
   .input-list__input-field {
-    padding: 11px 20px 7px 19px;
+    padding: 11px 50px 7px 19px;
 
     font-size: 20px;
     line-height: 20px;
