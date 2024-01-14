@@ -30,7 +30,7 @@
     @include pseudo-element;
 
     min-width: 60px;
-    min-height: 60px;
+    height: 60px;
 
     background: $company-primary-color var(--background-item) no-repeat 50% 50%;
     background-size: 30px 30px;

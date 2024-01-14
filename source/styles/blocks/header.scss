@@ -7,7 +7,7 @@
   padding-bottom: 12px;
 
   display: flex;
-  align-items: center;
+  align-items: start;
 
   border-bottom: 1px solid $secondary-grey;
 }
@@ -42,6 +42,7 @@
   width: 24px;
   height: 24px;
   padding: 0;
+  margin-top: 7px;
   margin-left: auto;
 
   background-color: $basic-black;

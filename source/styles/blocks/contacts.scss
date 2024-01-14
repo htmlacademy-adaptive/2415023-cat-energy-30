@@ -112,6 +112,8 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+
+    overflow: scroll;
   }
 
   .contacts__wrapper {
