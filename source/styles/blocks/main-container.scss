@@ -1,7 +1,5 @@
 .main-container {
-
-}
-
-.main-container__main-title {
-
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

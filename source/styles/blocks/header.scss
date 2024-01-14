@@ -1,20 +1,97 @@
 .header {
+  @include container-item(0);
 
-}
+  position: relative;
 
-.header__logo-wrapper {
+  padding-top: 12px;
+  padding-bottom: 12px;
 
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid $secondary-grey;
 }
 
 .header__company-logo-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 66%;
 
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-
-.header__company-logo-image {
-
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .header__company-logo-text {
+  justify-self: end;
+}
 
+.header__navigation {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+//Кнопка
+.header__menu-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-left: auto;
+
+  background-color: $basic-black;
+  mask: var(--form-button) no-repeat center;
+}
+
+.header__menu-button--opened {
+  --form-button: url("../../images/icons/stack.svg#icon-form-cross");
+  mask-size: 18px 18px;
+}
+
+.header__menu-button--closed {
+  --form-button: url("../../images/icons/stack.svg#icon-menu-burger");
+  mask-size: 24px 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 65px;
+
+    border-bottom: none;
+  }
+
+  .header__navigation {
+    position: static;
+    width: auto;
+    margin-left: auto;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__company-logo-link {
+    flex: initial;
+  }
+
+  .header__company-logo-text {
+    margin-left: 13px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .header__company-logo-text {
+    margin-left: 14px;
+  }
 }

@@ -1,40 +1,101 @@
-.main-navigation {
-
-}
-
-//список
 .main-navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  flex-direction: column;
+  text-align: center;
 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 1;
+  background-color: $basic-white;
 }
 
 .main-navigation__list-item {
+  padding-bottom: 24px;
 
+  &::before {
+    @include pseudo-element;
+    width: 100vw;
+    height: 1px;
+    margin-bottom: 24px;
+
+    background-color: $basic-additional-grey;
+  }
+}
+
+.main-navigation__list--closed {
+  position: absolute;
+  transform: scale(0);
 }
 
 .main-navigation__list-link {
   font-size: 20px;
   line-height: 20px;
+
+  &:focus {
+    @include box-shadow;
+    @include focus-outline($company-primary-color-more-dark);
+
+    padding: 5px 10px;
+    margin: -5px -10px;
+  }
 }
 
-.main-navigation__list-link--current {
+@media (min-width: $tablet-width) {
+  .main-navigation__list {
+    position: static;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    margin-left: 40px;
+    gap: 33px;
 
+    transform: translateX(0);
+    z-index: 0;
+    background-color: transparent;
+  }
+
+  .main-navigation__list-item {
+    padding: 0;
+
+    white-space: nowrap;
+
+    &::before {
+      position: fixed;
+      display: none;
+    }
+  }
+
+  .main-navigation__list--mobile-opened {
+    position: relative;
+  }
+
+  .main-navigation__list-link {
+    padding-bottom: 6px;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .main-navigation__list-link--current {
+    border-bottom: 2px solid $company-primary-color;
+  }
 }
 
-//Кнопка
-.main-navigation__list-button {
-  width: 24px;
-  height: 38px;
 
-  background-color: $basic-black;
-  mask: var(--form-button) no-repeat center;
-}
+@media (min-width: $desktop-width) {
+  .main-navigation__list-link {
+    font-size: 20px;
+    line-height: normal;
+  }
 
-.main-navigation__list-button--open {
-  --form-button: url("../../images/icons/stack.svg#icon-menu-burger");
-  mask-size: 24px 16px;
-}
+  .main-navigation__list--dark-background .main-navigation__list-link {
+    color: $basic-white;
+  }
 
-.main-navigation__list-button--close {
-  --form-button: url("../../images/icons/stack.svg#icon-form-cross");
-  mask-size: 18px 18px;
+  .main-navigation__list--dark-background .main-navigation__list-link--current {
+    border-bottom: 2px solid $basic-white;
+  }
 }

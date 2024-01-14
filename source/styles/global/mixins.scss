@@ -1,3 +1,4 @@
+/* шрифты */
 @mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
     font-family: $font-family;
@@ -6,4 +7,85 @@
     src: $font-src format("woff2");
     font-display: swap;
   }
+}
+
+/* псевдоэлемент */
+@mixin empty-content {
+  content: "";
+}
+
+@mixin pseudo-element {
+  @include empty-content;
+  display: block;
+}
+
+/* фоновый цвет во весь блок */
+@mixin background-overlay($color, $width: 100vw, $height: 100%, $left: calc(-50vw + 50%)) {
+  &::after {
+    @include pseudo-element;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: $left;
+    width: $width;
+    height: $height;
+    z-index: -1;
+
+    background-color: $color;
+  }
+}
+
+/* контейнеры для разных экранов */
+@mixin container-item($padding: 20px) {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 $padding;
+
+  // border-left: 2px solid rgb(255, 0, 0, 0.3);
+  // border-right: 2px solid rgb(255, 0, 0, 0.3);
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 0 110px;
+  }
+}
+
+/* фоновые палки слайдера*/
+@mixin slider-curtain ($height: 106px, $color: $special-grey) {
+  @include pseudo-element;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 4px;
+  height: $height;
+
+  background: $color;
+  border-radius: 2px;
+}
+
+/* элемент футера */
+@mixin footer-item ($justify-content, $border) {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  justify-content: $justify-content;
+
+  border-bottom: $border;
+}
+
+
+/* офорление */
+@mixin box-shadow ($color: $company-primary-color) {
+  box-shadow: 0 0 15px $color;
+}
+
+@mixin focus-outline ($color: $company-primary-color) {
+  outline: 2px solid $color;
 }

@@ -1,39 +1,42 @@
 .additional-products {
-
+  @include container-item;
 }
 
 .additional-products__title {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  padding-top: 23px;
+  padding-bottom: 35px;
+  margin: 0;
+
   font-size: 24px;
   line-height: 24px;
+
+  border-bottom: 1px solid $secondary-grey-darker;
 }
 
 //Список дополнительных продуктов
 .additional-products__list {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .additional-products__card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  padding-bottom: 17px;
 
-}
-
-.additional-products__card--sweetener {
-
-}
-
-.additional-products__card--drinking-water {
-
-}
-
-.additional-products__card--milk {
-
-}
-
-.additional-products__card--vitamins {
-
+  border-bottom: 1px solid $secondary-grey-darker;
 }
 
 //карточка продукта
 .additional-products__card-title {
+  margin: 0;
+  margin-bottom: 13px;
+
   color: $text-secondary-darker-color;
   font-family: $secondary-font-family;
   font-size: 16px;
@@ -42,17 +45,13 @@
 }
 
 .additional-products__card-properties {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+
   color: $text-secondary-color;
   font-size: 14px;
   line-height: 14px;
-}
-
-.additional-products__card-properties-title {
-
-}
-
-.additional-products__card-properties-price {
-
 }
 
 // кнопка продукта
@@ -63,15 +62,269 @@
 
 // промо-блок с подарками
 .additional-products__promo {
-  background-color: $company-primary-color;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 290px;
+  margin-top: 37px;
+  margin-bottom: 35px;
+
+  color: $basic-white;
+  text-align: center;
+
+  &::before {
+    @include pseudo-element;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-mobile@1x.png");
+    background-repeat: no-repeat no-repeat no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
-.additional-products__promo-title {
-
+@media (min-resolution: 2dppx) {
+  .additional-products__promo {
+    &::before {
+      background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-mobile@2x.png");
+    }
+  }
 }
+
 
 .additional-products__promo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
   color: $basic-white;
   font-size: 16px;
   line-height: 20px;
+
+  &::before {
+    @include pseudo-element;
+
+    width: 78px;
+    height: 80px;
+    margin-top: 59px;
+    margin-bottom: 48px;
+
+    background-color: #ffffff;
+    mask: url("../../images/icons/stack.svg#icon-gift") no-repeat center;
+    mask-size: cover;
+  }
+}
+
+.additional-products__promo-text-gift {
+  max-width: 161px;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products__title {
+    margin-left: 40px;
+    position: relative;
+    padding: 0;
+    margin-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    border-bottom: none;
+  }
+
+  .additional-products__list {
+    margin-bottom: 69px;
+  }
+
+  .additional-products__card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 27px 38px;
+
+    border: 1px solid $secondary-grey-darker;
+    border-bottom: none;
+
+    &:last-of-type {
+      border-bottom: 1px solid $secondary-grey-darker;
+    }
+  }
+
+  .additional-products__card-title {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-products__card-properties {
+    margin-left: auto;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-products__card-properties-price {
+    margin-left: 50px;
+  }
+
+  .additional-products__card-button {
+    flex-basis: 100%;
+  }
+
+  // промо-блок с подарками
+  .additional-products__promo {
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 200px;
+    padding: 0 125px 20px 77px;
+    margin-bottom: 75px;
+    box-sizing: border-box;
+
+    color: $basic-white;
+    text-align: center;
+
+    &::before {
+      @include pseudo-element;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      z-index: -1;
+
+      background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-tablet@1x.png");
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .additional-products__promo {
+      &::before {
+        background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-tablet@2x.png");
+      }
+    }
+  }
+
+  .additional-products__promo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    color: $basic-white;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: start;
+
+    &::before {
+      @include pseudo-element;
+
+      width: 80px;
+      height: 83px;
+
+      mask-size: 80px 83px;
+    }
+  }
+
+  .additional-products__promo-text-gift {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    margin-bottom: 15px;
+  }
+
+  .additional-products__list {
+    flex-grow: 1;
+  }
+
+  .additional-products__title {
+    margin-left: 0;
+    margin-bottom: 76px;
+
+    flex-basis: 100%;
+
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+  }
+
+  .additional-products__card {
+    padding: 16px 0 15px 0;
+    align-items: center;
+
+    border: none;
+    border-top: 1px solid $secondary-grey-darker;
+
+    &:last-of-type {
+      border-bottom: 1px solid $secondary-grey-darker;
+    }
+  }
+
+  .additional-products__card-title {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .additional-products__card-properties {
+    min-width: 286px;
+    justify-content: space-between;
+  }
+
+  .additional-products__card-button {
+    flex-basis: auto;
+    min-width: 246px;
+    margin-left: 40px;
+    box-sizing: border-box;
+  }
+
+  .additional-products__promo {
+    width: 245px;
+    height: 288px;
+    padding: 0;
+    margin: 0;
+
+    background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-desktop@1x.png");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .additional-products__promo {
+      &::before {
+        background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-desktop@2x.png");
+      }
+    }
+  }
+
+  .additional-products__promo-text {
+    flex-direction: column;
+
+    &::before {
+      margin-top: 16px;
+      margin-bottom: 46px;
+    }
+  }
+
+  .additional-products__promo-text-gift {
+    margin: 0;
+
+    text-align: center;
+  }
 }

@@ -1,41 +1,91 @@
-.input-list {
-
-}
-
 .input-list__input {
+  display: flex;
+  position: relative;
+  align-items: center;
 
+  overflow: hidden;
+
+  &::before {
+    @include pseudo-element;
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+    background-color: $basic-black;
+
+    mask: var(--social-icon) no-repeat center;
+  }
+
+  &--no-icon {
+    --social-icon: url("../../images/icons/stack.svg#no-icon");
+  }
+
+  &--owner-email {
+    --social-icon: url("../../images/icons/stack.svg#icon-email");
+  }
+
+  &--owner-phone {
+    --social-icon: url("../../images/icons/stack.svg#icon-phone");
+  }
+
+  &:focus-within {
+    &::before {
+      background-color: $company-primary-color;
+    }
+  }
+
+  &--error {
+    &::before {
+      background-color: $error-color;
+    }
+  }
+
+  &--error .input-list__input-field {
+    border: 2px solid $error-color;
+  }
 }
+
 
 .input-list__input-label {
-
+  white-space: nowrap;
+  margin-right: 13px;
 }
 
 .input-list__input-field {
+  padding: 10px 20px 9px 15px;
+  width: 100%;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  appearance: textfield;
+
+  outline: none;
+  border: 2px solid $input-border-grey;
+
   color: $text-secondary-color;
   font-family: $secondary-font-family;
-  font-size: 20px;
-  line-height: normal;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+
+  &:hover {
+    border: 2px solid $secondary-grey-darker;
+  }
+
+  &:focus {
+    border: 2px solid $text-secondary-color;
+  }
 }
 
-// данные кота
-.input-list__input--patient-name {
+@media (min-width: $tablet-width) {
+  .input-list__input-field {
+    padding: 11px 20px 7px 19px;
 
-}
-
-.input-list__input--patient-weight {
-
-}
-
-.input-list__input--patient-age {
-
-}
-
-// данные владельца
-.input-list__input--owner-name {
-
-}
-
-.input-list__input--owner-phone {
-
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

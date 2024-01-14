@@ -1,0 +1,37 @@
+.decoration-line {
+  position: relative;
+  width: fit-content;
+
+  &::after,
+  &::before {
+    @include pseudo-element;
+    position: absolute;
+    top: 50%;
+    transform: translateY(3px);
+    width: 100vw;
+    height: 2px;
+
+    background-color: $company-primary-color;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    left: calc(100% + 20px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .decoration-line {
+    &::before {
+      display: block;
+      right: calc(100% + 40px);
+    }
+
+    &::after {
+      left: calc(100% + 40px);
+    }
+  }
+}

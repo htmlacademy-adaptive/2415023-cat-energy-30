@@ -6,4 +6,18 @@
   border: none;
   text-decoration: none;
   background-color: transparent;
+  padding: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    @include focus-outline;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
 }

@@ -1,15 +1,72 @@
 .checkbox-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 
+  margin-left: 2px;
 }
 
 .checkbox-list__item {
-
+  display: flex;
+  align-items: center;
+  gap: 17px;
 }
 
 .checkbox-list__checkbox-cell {
+  appearance: none;
+  min-width: 26px;
+  min-height: 26px;
+  margin: 0;
 
+  background-color: #ffffff;
+  outline: 1px solid $secondary-grey-darker;
+
+  &:checked {
+    background-image: url("../../images/icons/stack.svg#icon-tick");
+    background-repeat: no-repeat;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    outline: 1px solid $radio-button-hover;
+  }
+
+  &:hover {
+    outline: 1px solid $radio-button-hover;
+  }
+
+  &:focus {
+    @include box-shadow;
+    outline: 1px solid $company-primary-color-darker;
+  }
 }
 
-.checkbox-list__checkbox-description {
+.checkbox-list__checkbox-cell:disabled + .checkbox-list__checkbox-description {
+  opacity: 0.3;
+}
 
+
+@media (min-width: $tablet-width) {
+  .checkbox-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 36px;
+    column-gap: 60px;
+  }
+
+  .checkbox-list__checkbox-cell {
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .checkbox-list__item {
+    gap: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .checkbox-list {
+    grid-template-columns: repeat(4, 300px);
+    column-gap: 25px;
+  }
 }

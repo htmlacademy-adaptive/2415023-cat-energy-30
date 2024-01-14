@@ -1,98 +1,314 @@
 .program-selection {
-
+  @include container-item(0);
+  margin-bottom: 32px;
 }
 
 .program-selection__title {
-  font-size: 60px;
-  line-height: 60px;
+  margin-top: 24px;
+  margin-bottom: 35px;
+
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .program-selection__subtitle {
-  font-size: 20px;
-  line-height: 30px;
+  max-width: 226px;
+  margin-bottom: 39px;
+
+  font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
-.program-selection__form {
-
+.program-selection__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
 }
 
 .program-selection__fieldset {
+  padding: 0;
+  padding-bottom: 22px;
+  margin: 0;
   border: none;
 
   color: $text-secondary-color;
   font-family: $secondary-font-family;
-  font-size: 20px;
-  line-height: normal;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+
+  &--goal {
+    padding-top: 22px;
+    padding-bottom: 18px;
+
+    border-top: 1px solid $secondary-grey;
+    border-bottom: 1px solid $secondary-grey;
+  }
+
+  &--comment {
+    padding-bottom: 24px;
+  }
+
+  &--supplements {
+    padding-bottom: 36px;
+  }
 }
 
 .program-selection__fieldset-legend {
+  display: block;
+  width: 100%;
+  position: relative;
   padding: 0;
 
   color: $basic-black;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 26px;
   text-transform: none;
-}
 
-.program-selection__fieldset-wrapper {
+  &--owner-data {
+    padding-top: 24px;
+    margin-bottom: 33px;
+  }
 
-}
+  &--comment {
+    margin-bottom: 38px;
+  }
 
-.program-selection__obligatory-caption {
-  font-size: 16px;
-  line-height: 16px;
+  &--supplements {
+    margin-bottom: 37px;
+  }
 }
 
 // textarea
 .program-selection__comment {
+  min-height: 148px;
+  width: 280px;
+  padding: 12px 13px;
+  box-sizing: border-box;
+
+  border: 1px solid #e6e6e6;
+
   font-family: $secondary-font-family;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 
   &::placeholder {
     font-family: $secondary-font-family;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 18px;
     text-transform: uppercase;
+  }
+
+  &:focus {
+    @include focus-outline;
   }
 }
 
-
 // кнопка формы
 .program-selection__button {
-  font-size: 20px;
-  line-height: 26px;
+  width: 100%;
+  margin-bottom: 21px;
+
+  font-size: 16px;
+  line-height: 20px;
 }
 
-// модификаторы формы
-// данные кота
-.program-selection__fieldset--patient-data {
+.program-selection__obligatory-caption {
+  display: block;
 
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
 
+@media (min-width: $tablet-width) {
+  .program-selection {
+    margin-bottom: 60px;
+  }
 
-// цель обращения
-.program-selection__fieldset--goal {
+  .program-selection__title {
+    padding: 0 $tablet-form-padding;
+    margin-top: -2px;
+    margin-bottom: 54px;
 
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .program-selection__subtitle {
+    max-width: 323px;
+    margin-top: 0;
+    padding: 0 $tablet-form-padding;
+    margin-bottom: 64px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-selection__fieldset-wrapper {
+    row-gap: 20px;
+  }
+
+  .program-selection__fieldset {
+    padding: 0 $tablet-form-padding;
+    margin-bottom: 65px;
+
+    font-size: 20px;
+    line-height: normal;
+
+    &--patient-data {
+      margin-bottom: 73px;
+    }
+
+    &--goal {
+      padding: 22px 25px 26px 25px;
+      margin-left: 41px;
+      margin-right: 40px;
+
+      border: 1px solid $secondary-grey;
+    }
+
+    &--supplements {
+      margin-bottom: 54px;
+    }
+  }
+
+  .program-selection__fieldset-legend {
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &--owner-data {
+      margin-bottom: 75px;
+    }
+
+    &--comment {
+      margin-bottom: 87px;
+    }
+
+    &--supplements {
+      margin-bottom: 59px;
+    }
+  }
+
+  // textarea
+  .program-selection__comment {
+    min-height: 173px;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  // кнопка формы
+  .program-selection__additional-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    padding: 0 $tablet-form-padding;
+  }
+
+  .program-selection__button {
+    margin: 0;
+    padding: 14px 15px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .program-selection__obligatory-caption {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: start;
+    align-self: center;
+  }
 }
 
+@media (min-width: $desktop-width) {
+  .program-selection {
+    margin-bottom: 79px;
+  }
 
-// данные владельца
-.program-selection__fieldset--owner-data {
+  .program-selection__title {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 55px;
+  }
 
-}
+  .program-selection__subtitle {
+    padding: 0;
+    margin-bottom: 66px;
+  }
 
+  .program-selection__main-info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
 
-// комментарий
-.program-selection__fieldset--comment {
+  .program-selection__fieldset {
+    padding: 0;
+    margin-bottom: 70px;
 
-}
+    &--goal {
+      height: min-content;
+      padding: 26px 16px 23px 28px;
+      margin: 0;
 
+      grid-column: 2;
+    }
 
-// дополнительные продукты
-.program-selection__fieldset--supplements {
+    &--comment {
+      margin-bottom: 68px;
+    }
 
+    &--supplements {
+      margin-bottom: 63px;
+    }
+  }
+
+  .program-selection__fieldset-legend {
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &--comment {
+      margin-bottom: 78px;
+    }
+
+    &--supplements {
+      margin-bottom: 57px;
+    }
+  }
+
+  .program-selection__fieldset-wrapper {
+    &--owner-data {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 80px;
+    }
+  }
+
+  .program-selection__comment {
+    height: 178px;
+    padding: 9px 19px;
+  }
+
+  .program-selection__additional-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    padding: 0;
+  }
 }

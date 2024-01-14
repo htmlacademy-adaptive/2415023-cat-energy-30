@@ -1,21 +1,101 @@
 .main-footer {
+  @include container-item(0);
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  padding: 17px 0;
+
+  @include background-overlay($basic-grey);
 }
 
-.main-footer__company-logo {
-
-}
-
+.main-footer__logo-wrapper,
 .main-footer__social-list {
-
+  @include footer-item(center, 1px solid $secondary-grey);
 }
 
 .main-footer__copyright {
+  @include footer-item(space-between, none);
 
+  align-items: center;
+
+  color: $text-secondary-color;
+  font-family: $basic-font-family;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+
+  &::after {
+    @include pseudo-element;
+
+    width: 27px;
+    height: 34px;
+
+    background-color: $special-grey;
+    mask: url("../../images/logo-html-academy.svg") no-repeat center;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    &::after {
+      background-color: $company-primary-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__copyright-name {
   color: $text-secondary-color;
   font-size: 16px;
   line-height: 20px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .main-footer > * {
+    border-bottom: none;
+    width: auto;
+    padding-top: 0;
+  }
+
+  .main-footer {
+    flex-direction: row;
+    padding: 55px 0;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-footer__logo-wrapper {
+    display: block;
+  }
+
+  .main-footer__logo {
+    width: 128px;
+    min-height: 24px;
+  }
+
+  .main-footer__social-list {
+    margin-left: 35px;
+  }
+
+  .main-footer__copyright {
+    gap: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer {
+    padding: 48px 0;
+  }
+
+  .main-footer > * {
+    padding-top: 20px;
+  }
 }
