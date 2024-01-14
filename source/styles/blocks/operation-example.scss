@@ -116,7 +116,7 @@
 }
 
 .operation-example__slider-image {
-  width: 140px;
+  width: 280px;
   height: auto;
   object-fit: cover;
 }
@@ -135,20 +135,41 @@
   cursor: pointer;
   border-radius: 50%;
   border: 2px solid $special-grey;
+  background-color: $basic-white;
 
-  background-image: url("../../images/icons/stack.svg#icon-slider-pointers");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 24px 18px;
+  &:active {
+    opacity: 0.6;
+  }
 
   &::before {
-    @include slider-curtain;
-    top: 40px;
+    @include pseudo-element;
+    position: absolute;
+    top: 11px;
+    left: 7px;
+
+    width: 24px;
+    height: 18px;
+
+    background-color: $special-grey;
+
+    mask: url("../../images/icons/stack.svg#icon-slider-pointers") no-repeat center;
+    mask-size: 24px 18px;
   }
 
   &::after {
-    @include slider-curtain;
-    bottom: 40px;
+    @include slider-curtain (256px, linear-gradient(to bottom, $special-grey 108px, $basic-white 108px, $basic-white 148px, $special-grey 148px));
+  }
+
+  &:hover {
+    border: 2px solid $company-primary-color;
+
+    &::before {
+      background-color: $company-primary-color;
+    }
+
+    &::after {
+      @include slider-curtain (256px, linear-gradient(to bottom, $company-primary-color 108px, $basic-white 108px, $basic-white 148px, $company-primary-color 148px));
+    }
   }
 }
 
@@ -243,16 +264,14 @@
   }
 
   .operation-example__slider-button {
-    top: 50%;
-
-    &::before {
-      @include slider-curtain(234px);
-      top: 40px;
+    &::after {
+      @include slider-curtain (512px, linear-gradient(to bottom, $special-grey 236px, $basic-white 236px, $basic-white 276px, $special-grey 276px));
     }
 
-    &::after {
-      @include slider-curtain(234px);
-      bottom: 40px;
+    &:hover {
+      &::after {
+        @include slider-curtain (512px, linear-gradient(to bottom, $company-primary-color 236px, $basic-white 236px, $basic-white 276px, $company-primary-color 276px));
+      }
     }
   }
 }
@@ -302,11 +321,11 @@
     gap: 65px;
   }
 
-  // .operation-example__slider {
-  //   justify-self: end;
-  //   align-self: self-start;
+  .operation-example__slider {
+    justify-self: end;
+    align-self: self-start;
 
-  //   grid-row: 1 / 4;
-  //   grid-column: 2;
-  // }
+    grid-row: 1 / 4;
+    grid-column: 2;
+  }
 }

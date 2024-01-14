@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
   /* слайдер толстого-худого кота*/
-
   const sliderButton = document.querySelector('.operation-example__slider-button');
   const slider = document.querySelector('.operation-example__slider');
   const sliderWrapperBefore = document.querySelector('.operation-example__slider-wrapper--before');
@@ -34,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     isDragging = true;
     startX = event.clientX;
+
+    sliderButton.style.opacity = '0.6';
   });
 
   document.addEventListener('mousemove', (event) => {
@@ -52,12 +52,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('mouseup', () => {
     isDragging = false;
-  });
-
-  // Добавлен обработчик для предотвращения выделения текста при перетаскивании
-  document.addEventListener('selectstart', (event) => {
-    if (isDragging) {
-      event.preventDefault();
-    }
   });
 });

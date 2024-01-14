@@ -19,7 +19,7 @@
   display: block;
 }
 
-/* фоновый цвет */
+/* фоновый цвет во весь блок */
 @mixin background-overlay($color, $width: 100vw, $height: 100%, $left: calc(-50vw + 50%)) {
   &::after {
     @include pseudo-element;
@@ -35,41 +35,7 @@
   }
 }
 
-/* линии заголовков */
-@mixin header-line {
-  @include pseudo-element;
-  position: absolute;
-  top: 50%;
-
-  height: 2px;
-
-  background-color: $company-primary-color;
-}
-
-@mixin header-left-line($left, $width, $margin-top) {
-  &::before {
-    @include header-line;
-
-    left: $left;
-
-    width: $width;
-    margin-top: $margin-top;
-  }
-}
-
-@mixin header-right-line($right, $width, $margin-top) {
-  &::after {
-    @include header-line;
-
-    right: $right;
-
-    width: $width;
-    margin-top: $margin-top;
-  }
-}
-
-
-/* контейнеры */
+/* контейнеры для разных экранов */
 @mixin container-item($padding: 20px) {
   width: 280px;
   margin: 0 auto;
@@ -90,16 +56,18 @@
 }
 
 /* фоновые палки слайдера*/
-@mixin slider-curtain ($height: 106px) {
+@mixin slider-curtain ($height: 106px, $color: $special-grey) {
   @include pseudo-element;
   position: absolute;
+  top: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 
   width: 4px;
   height: $height;
 
-  background-color: $special-grey;
+  background: $color;
+  border-radius: 2px;
 }
 
 /* элемент футера */

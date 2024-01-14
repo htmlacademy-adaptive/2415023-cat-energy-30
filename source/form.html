@@ -25,9 +25,9 @@
           <img class="header__company-logo-text logo__text" src="images/logo-text.svg" width="101" height="18" alt="Cat Energy.">
         </picture>
       </a>
-      <a class="button header__menu-button header__menu-button--closed" href="menu.html"><!-- модификатор opened/closed - для открытой/закрытой навигации -->
+      <button class="button header__menu-button header__menu-button--closed" type="button"><!-- модификатор opened/closed - для открытой/закрытой навигации -->
         <span class="visually-hidden">Открывает/Закрывает навигацию</span>
-      </a>
+      </button>
       <nav class="header__navigation main-navigation">
         <ul class="list main-navigation__list main-navigation__list--closed"><!-- opened/closed - для открытой/закрытой навигации -->
           <li class="main-navigation__list-item main-navigation__list-item--mobile">
@@ -89,7 +89,7 @@
           </div>
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--owner-data">
-            <legend class="program-selection__fieldset-legend program-selection__fieldset-legend--owner-data">Контактные данные (владельца кота)</legend>
+            <legend class="program-selection__fieldset-legend program-selection__fieldset-legend--owner-data"><span class="decoration-line">Контактные данные (владельца кота)</span></legend>
             <ul class="list program-selection__fieldset-wrapper program-selection__fieldset-wrapper--owner-data input-list">
               <li class="input-list__input input-list__input--owner-email">
                 <label class="input-list__input-label" for="e-mail">E-mail:*</label>
@@ -103,13 +103,13 @@
           </fieldset>
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--comment">
-            <legend class="program-selection__fieldset-legend program-selection__fieldset-legend--comment">Комментарий</legend>
+            <legend class="program-selection__fieldset-legend program-selection__fieldset-legend--comment"><span class="decoration-line">Комментарий</span></legend>
             <label class="program-selection__fieldset-label visually-hidden">Расскажите обо всех повадках кота</label>
             <textarea class="program-selection__comment" id="order-comment" name="comment" cols="40" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="program-selection__fieldset program-selection__fieldset--supplements">
-            <legend class="program-selection__fieldset-legend program-selection__fieldset-legend--supplements">Дополнительно</legend>
+            <legend class="program-selection__fieldset-legend program-selection__fieldset-legend--supplements"><span class="decoration-line">Дополнительно</span></legend>
             <ul class="list program-selection__fieldset-wrapper checkbox-list">
               <li class="checkbox-list__item">
                 <input class="checkbox-list__checkbox-cell" type="checkbox" id="sweetener" name="supplements" value="сахарозаменитель" checked>

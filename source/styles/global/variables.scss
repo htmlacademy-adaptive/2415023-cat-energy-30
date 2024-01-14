@@ -4,9 +4,14 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 
 /* distances */
-$mobile-container-padding: 0 20px;
-$tablet-container-padding: 0 30px;
-$desktop-container-padding: 0 110px;
+$mobile-padding: 20px;
+$tablet-padding: 30px;
+$desktop-padding: 110px;
+
+$mobile-container-padding: 0 $mobile-padding;
+$tablet-container-padding: 0 $tablet-padding;
+$desktop-container-padding: 0 $desktop-padding;
+
 
 $tablet-form-padding: 40px;
 

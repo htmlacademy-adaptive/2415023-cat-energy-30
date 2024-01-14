@@ -69,14 +69,10 @@
   &--owner-data {
     padding-top: 24px;
     margin-bottom: 33px;
-
-    @include header-right-line(-20px, 93px, 7px);
   }
 
   &--comment {
     margin-bottom: 38px;
-
-    @include header-right-line(-20px, 159px, 2px);
   }
 
   &--supplements {

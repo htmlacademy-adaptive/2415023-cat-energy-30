@@ -10,7 +10,8 @@
 @import "./blocks/link.scss";
 @import "./blocks/button.scss";
 @import "./blocks/list.scss";
-// @import "./blocks/background-fill.scss";
+@import "./blocks/background-fill.scss";
+
 
 /* тоже общие блоки*/
 @import "./blocks/page.scss";
@@ -37,10 +38,10 @@
 @import "./blocks/radio-list.scss";
 @import "./blocks/checkbox-list.scss";
 
-/* visually-hidden */
+/* декоративные блоки */
 @import "./blocks/visually-hidden.scss";
+@import "./blocks/decoration-line.scss";
 
 /* коммент -заметка что еще нужно сделать:
-8) зеленые полосы поменять
 9) опять проверить на PP, особенно формы
 */
