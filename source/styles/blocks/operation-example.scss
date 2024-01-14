@@ -160,8 +160,10 @@
     @include slider-curtain (256px, linear-gradient(to bottom, $special-grey 108px, $basic-white 108px, $basic-white 148px, $special-grey 148px));
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 2px solid $company-primary-color;
+    outline: none;
 
     &::before {
       background-color: $company-primary-color;
@@ -268,7 +270,8 @@
       @include slider-curtain (512px, linear-gradient(to bottom, $special-grey 236px, $basic-white 236px, $basic-white 276px, $special-grey 276px));
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       &::after {
         @include slider-curtain (512px, linear-gradient(to bottom, $company-primary-color 236px, $basic-white 236px, $basic-white 276px, $company-primary-color 276px));
       }
