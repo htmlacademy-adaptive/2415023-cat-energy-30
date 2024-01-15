@@ -49,6 +49,7 @@
 
 .hero__title-container {
   position: relative;
+  margin-bottom: 17px;
 
   &::after {
     @include pseudo-element;
@@ -67,10 +68,6 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-}
-
-.hero__title-container {
-  margin-bottom: 17px;
 }
 
 .hero__title {

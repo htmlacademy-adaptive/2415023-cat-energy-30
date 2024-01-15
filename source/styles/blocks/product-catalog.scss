@@ -104,9 +104,7 @@
 
     mask: url("../../images/icons/stack.svg#icon-plus") no-repeat center;
   }
-}
 
-.product-catalog__additional-card-show-one-more-button {
   &:hover {
     opacity: 1;
 
@@ -325,7 +323,7 @@
   }
 
   .product-catalog__card-image-container {
-      width: 169px;
+    width: 169px;
   }
 
   .product-catalog__card-image-link {
