@@ -29,13 +29,15 @@
 
 .operation-example__list-wrapper {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 18px;
 }
 
 .operation-example__list {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+
+  margin-bottom: 17px;
 }
 
 .operation-example__item {
@@ -95,7 +97,10 @@
 }
 
 .operation-example__list-total {
+  margin: 0;
+
   font-family: $secondary-font-family;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
@@ -187,7 +192,7 @@
 
 @media (min-width: $tablet-width) {
   .operation-example {
-    @include background-overlay($basic-darker-grey, 100vw, 44%);
+    @include background-overlay($basic-darker-grey, 100vw, 43%);
     position: relative;
     padding-bottom: 100px;
   }
@@ -212,7 +217,7 @@
     justify-content: start;
     align-items: center;
 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .operation-example__list {
@@ -313,7 +318,7 @@
 
     padding-bottom: 75px;
 
-    @include background-overlay($basic-darker-grey, 100vw, 75%);
+    @include background-overlay($basic-darker-grey, 100vw, 78%);
   }
 
   .operation-example__title {
@@ -332,11 +337,12 @@
   }
 
   .operation-example__list {
+    margin-bottom: 25px;
     gap: 42px;
   }
 
   .operation-example__item {
-    margin-top: 13px;
+    margin-top: 15px;
   }
 
   .operation-example__item-number-subtitle {
@@ -346,7 +352,7 @@
   .operation-example__list-total {
     flex-direction: row;
     margin: 0;
-    margin-top: 55px;
+    margin-top: 30px;
     gap: 65px;
   }
 

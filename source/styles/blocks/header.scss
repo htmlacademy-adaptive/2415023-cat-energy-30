@@ -29,6 +29,7 @@
 
 .header__company-logo-text {
   justify-self: end;
+  margin-right: -5px;
 }
 
 .header__navigation {
@@ -42,7 +43,7 @@
   width: 24px;
   height: 24px;
   padding: 0;
-  margin-top: 7px;
+  margin-top: 8px;
   margin-left: auto;
 
   background-color: $basic-black;
