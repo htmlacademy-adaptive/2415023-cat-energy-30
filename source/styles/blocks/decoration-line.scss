@@ -3,6 +3,15 @@
   width: fit-content;
   display: inline-block;
 
+  &--owner-data {
+    max-width: 183px;
+
+    &::after,
+    &::before {
+      margin-top: -12px;
+    }
+  }
+
   &::after,
   &::before {
     @include pseudo-element;
@@ -24,12 +33,17 @@
   }
 }
 
-.decoration-line--owner-data {
-  max-width: 183px;
-}
-
 @media (min-width: $tablet-width) {
   .decoration-line {
+    &--owner-data {
+      max-width: max-content;
+
+      &::after,
+      &::before {
+        margin-top: 0;
+      }
+    }
+
     &::before {
       display: block;
       right: calc(100% + 40px);
@@ -38,9 +52,5 @@
     &::after {
       left: calc(100% + 40px);
     }
-  }
-
-  .decoration-line--owner-data {
-    width: fit-content;
   }
 }

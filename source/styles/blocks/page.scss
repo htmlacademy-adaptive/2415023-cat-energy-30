@@ -6,3 +6,53 @@
 
   overflow-x: hidden;
 }
+
+@media (min-width: $desktop-width) {
+  .page__body--background {
+    position: relative;
+
+    &::before,
+    &::after {
+      @include pseudo-element;
+      position: absolute;
+      z-index: -1;
+      width: 50%;
+      min-height: 695px;
+      top: 0;
+      right: 0;
+      transform: translateX(0);
+
+      background: url("../../images/hero-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::after {
+      background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85));
+    }
+  }
+
+  .page__body--background-404 {
+    &::before,
+    &::after {
+      @include pseudo-element;
+      position: absolute;
+      z-index: -1;
+      width: 50%;
+      height: 695px;
+      top: 0;
+      right: 0;
+      transform: translateX(0);
+
+      background: url("../../images/hero-background-desktop-404@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::after {
+      background: linear-gradient(rgba($error-color, 0.75), rgba($basic-white, 0.75));
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
