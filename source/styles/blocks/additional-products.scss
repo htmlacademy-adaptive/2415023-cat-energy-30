@@ -156,7 +156,7 @@
   .additional-products__card {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 27px 38px;
+    padding: 26px 38px 22px 38px;
 
     border: 1px solid $secondary-grey-darker;
     border-bottom: none;
@@ -177,16 +177,19 @@
     margin-left: auto;
     margin-bottom: 0;
 
+    gap: 40px;
+
     font-size: 16px;
     line-height: 20px;
   }
 
-  .additional-products__card-properties-price {
-    margin-left: 50px;
+  .additional-products__card-properties-title {
+    margin-right: 15px;
   }
 
   .additional-products__card-button {
     flex-basis: 100%;
+    margin-bottom: 6px;
   }
 
   // промо-блок с подарками
@@ -196,7 +199,7 @@
     align-items: start;
     justify-content: center;
     min-height: 200px;
-    padding: 0 125px 20px 77px;
+    padding: 0 125px 0 77px;
     margin-bottom: 75px;
     box-sizing: border-box;
 
@@ -239,14 +242,16 @@
 
       width: 80px;
       height: 83px;
+      margin: 0;
 
       mask-size: 80px 83px;
     }
   }
 
   .additional-products__promo-text-gift {
-    margin-top: 20px;
-    padding-top: 15px;
+    max-width: 201px;
+    margin: -20px;
+    padding: 20px;
   }
 }
 
@@ -265,7 +270,7 @@
 
   .additional-products__title {
     margin-left: 0;
-    margin-bottom: 76px;
+    margin-bottom: 79px;
 
     flex-basis: 100%;
 
@@ -276,7 +281,7 @@
   }
 
   .additional-products__card {
-    padding: 16px 0 15px 0;
+    padding: 13px 0 12px 0;
     align-items: center;
 
     border: none;
@@ -299,7 +304,7 @@
 
   .additional-products__card-properties-title,
   .additional-products__card-properties-price {
-    max-width: 130px;
+    max-width: 135px;
     word-wrap: break-word;
   }
 
@@ -311,11 +316,15 @@
   }
 
   .additional-products__promo {
+    display: flex;
     width: 245px;
     min-height: 288px;
     height: min-content;
     padding: 0;
+    padding-top: 58px;
     margin: 0;
+
+    justify-content: start;
 
     background: linear-gradient(rgba($company-primary-color, 0.85), rgba($company-primary-color, 0.85)), url("../../images/promo-background-desktop@1x.png");
     background-repeat: no-repeat;
@@ -333,16 +342,10 @@
 
   .additional-products__promo-text {
     flex-direction: column;
-
-    &::before {
-      margin-top: 16px;
-      margin-bottom: 46px;
-    }
+    gap: 45px;
   }
 
   .additional-products__promo-text-gift {
-    margin: 0;
-
     text-align: center;
   }
 }
