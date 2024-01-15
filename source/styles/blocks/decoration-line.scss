@@ -1,7 +1,7 @@
 .decoration-line {
   position: relative;
-  width: min-content;
-  display: block;
+  width: fit-content;
+  display: inline-block;
 
   &::after,
   &::before {
@@ -24,6 +24,10 @@
   }
 }
 
+.decoration-line--owner-data {
+  max-width: 183px;
+}
+
 @media (min-width: $tablet-width) {
   .decoration-line {
     &::before {
@@ -34,5 +38,9 @@
     &::after {
       left: calc(100% + 40px);
     }
+  }
+
+  .decoration-line--owner-data {
+    width: fit-content;
   }
 }
