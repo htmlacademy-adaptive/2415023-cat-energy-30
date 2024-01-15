@@ -7,7 +7,7 @@
   padding-bottom: 12px;
 
   display: flex;
-  align-items: center;
+  align-items: start;
 
   border-bottom: 1px solid $secondary-grey;
 }
@@ -29,6 +29,7 @@
 
 .header__company-logo-text {
   justify-self: end;
+  margin-right: -5px;
 }
 
 .header__navigation {
@@ -42,6 +43,7 @@
   width: 24px;
   height: 24px;
   padding: 0;
+  margin-top: 8px;
   margin-left: auto;
 
   background-color: $basic-black;

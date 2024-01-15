@@ -29,14 +29,15 @@
 
 .operation-example__list-wrapper {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 18px;
 }
 
 .operation-example__list {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  justify-content: space-around;
+
+  margin-bottom: 17px;
 }
 
 .operation-example__item {
@@ -48,34 +49,45 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &::after {
-    @include pseudo-element;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    width: 124px;
-    height: 56px;
-
-    background: url("../../images/icons/stack.svg#icon-frame") no-repeat center;
-    background-size: 100%;
-  }
 }
 
 .operation-example__item-number {
-  margin-bottom: 8px;
-  margin-top: 16px;
+  position: relative;
+  width: 122px;
+  padding: 11px 10px 16px 10px;
 
   font-family: $secondary-font-family;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  word-wrap: break-word;
+
+  border: 1px solid $secondary-grey-darker;
+  border-bottom: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    @include pseudo-element;
+    position: absolute;
+    height: 0;
+    width: 18px;
+    left: 0;
+    bottom: 0;
+
+    border-bottom: 1px solid $secondary-grey-darker;
+  }
+
+  &::after {
+    left: auto;
+    right: 0;
+  }
 }
 
 .operation-example__item-number-subtitle {
-  display: block;
   max-width: 75px;
+  margin-top: -8px;
 
   font-size: 12px;
   font-weight: 400;
@@ -85,7 +97,10 @@
 }
 
 .operation-example__list-total {
+  margin: 0;
+
   font-family: $secondary-font-family;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
@@ -177,7 +192,7 @@
 
 @media (min-width: $tablet-width) {
   .operation-example {
-    @include background-overlay($basic-darker-grey, 100vw, 44%);
+    @include background-overlay($basic-darker-grey, 100vw, 43%);
     position: relative;
     padding-bottom: 100px;
   }
@@ -202,7 +217,7 @@
     justify-content: start;
     align-items: center;
 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .operation-example__list {
@@ -226,14 +241,30 @@
   }
 
   .operation-example__item-number {
+    width: 162px;
+    padding: 14px 10px 20px 10px;
+
     font-size: 30px;
     line-height: 37px;
 
     margin-bottom: 11px;
+
+    &::before,
+    &::after {
+      width: 24px;
+    }
+  }
+
+  .operation-example__item--time .operation-example__item-number {
+    &::before,
+    &::after {
+      width: 9px;
+    }
   }
 
   .operation-example__item-number-subtitle {
     max-width: 125px;
+    margin-top: -19px;
 
     font-size: 14px;
     line-height: 14px;
@@ -287,7 +318,7 @@
 
     padding-bottom: 75px;
 
-    @include background-overlay($basic-darker-grey, 100vw, 75%);
+    @include background-overlay($basic-darker-grey, 100vw, 78%);
   }
 
   .operation-example__title {
@@ -306,11 +337,12 @@
   }
 
   .operation-example__list {
+    margin-bottom: 25px;
     gap: 42px;
   }
 
   .operation-example__item {
-    margin-top: 13px;
+    margin-top: 15px;
   }
 
   .operation-example__item-number-subtitle {
@@ -320,7 +352,7 @@
   .operation-example__list-total {
     flex-direction: row;
     margin: 0;
-    margin-top: 55px;
+    margin-top: 30px;
     gap: 65px;
   }
 

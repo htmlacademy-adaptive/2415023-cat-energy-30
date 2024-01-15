@@ -4,8 +4,8 @@
     font-family: $font-family;
     font-weight: $font-weight;
     font-style: $font-style;
-    src: $font-src format("woff2");
     font-display: swap;
+    src: $font-src format("woff2");
   }
 }
 
@@ -17,6 +17,19 @@
 @mixin pseudo-element {
   @include empty-content;
   display: block;
+}
+
+/* стабилизация изображения */
+@mixin image-stabilization {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@mixin image-stabilization-height {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 /* фоновый цвет во весь блок */

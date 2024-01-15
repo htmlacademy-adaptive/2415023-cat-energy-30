@@ -2,11 +2,12 @@
   @include container-item(0);
 
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  gap: 0;
 
-  padding: 17px 0;
+  padding: 20px 0;
 
   @include background-overlay($basic-grey);
 }
@@ -14,11 +15,13 @@
 .main-footer__logo-wrapper,
 .main-footer__social-list {
   @include footer-item(center, 1px solid $secondary-grey);
+  height: min-content;
 }
 
 .main-footer__copyright {
   @include footer-item(space-between, none);
 
+  gap: 23px;
   align-items: center;
 
   color: $text-secondary-color;
@@ -30,7 +33,7 @@
   &::after {
     @include pseudo-element;
 
-    width: 27px;
+    min-width: 27px;
     height: 34px;
 
     background-color: $special-grey;
@@ -61,12 +64,15 @@
   .main-footer > * {
     border-bottom: none;
     width: auto;
-    padding-top: 0;
+    padding: 10px;
+    margin: 0 -10px;
   }
 
   .main-footer {
+    padding: 20px 0;
+    min-height: 147px;
     flex-direction: row;
-    padding: 55px 0;
+    box-sizing: border-box;
 
     justify-content: space-between;
     align-items: center;
@@ -84,18 +90,19 @@
   .main-footer__social-list {
     margin-left: 35px;
   }
-
-  .main-footer__copyright {
-    gap: 23px;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .main-footer {
-    padding: 48px 0;
+    min-height: 169px;
   }
 
   .main-footer > * {
-    padding-top: 20px;
+    margin: 0 -10px;
+    margin-top: -32px;
+  }
+
+  .main-footer__social-list {
+    margin-left: 30px;
   }
 }

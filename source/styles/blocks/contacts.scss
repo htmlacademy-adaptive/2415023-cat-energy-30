@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  padding: 26px 0;
+  padding: 24px 0;
 }
 
 .contacts__title {
@@ -42,8 +42,9 @@
 
 .contacts__map-image {
   display: block;
-  object-fit: cover;
   width: 100vw;
+
+  object-fit: cover;
 }
 
 .contacts__map-frame {
@@ -58,11 +59,18 @@
 }
 
 .contacts__map-pin {
+  display: block;
   position: absolute;
+  width: 57px;
+  height: 53px;
 
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.contacts__map-pin-image {
+  @include image-stabilization;
 }
 
 
@@ -86,7 +94,7 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 25px;
+    gap: 21px;
 
     justify-self: end;
     max-width: 157px;
@@ -100,7 +108,8 @@
   }
 
   .contacts__map-pin {
-    position: absolute;
+    width: 113px;
+    height: 106px;
 
     top: 40%;
     left: 50%;
@@ -112,6 +121,8 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+
+    overflow: scroll;
   }
 
   .contacts__wrapper {
@@ -119,7 +130,7 @@
     width: 565px;
     top: 95px;
     left: 110px;
-    padding: 60px 80px;
+    padding: 62px 80px;
 
     z-index: 1;
 
