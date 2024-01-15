@@ -1,6 +1,7 @@
 .decoration-line {
   position: relative;
-  width: fit-content;
+  width: min-content;
+  display: block;
 
   &::after,
   &::before {

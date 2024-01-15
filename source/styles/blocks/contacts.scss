@@ -29,7 +29,7 @@
   margin: 0;
 }
 
-//Карта
+// Карта
 .contacts-map {
   align-self: center;
 }
@@ -121,8 +121,6 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
-
-    overflow: scroll;
   }
 
   .contacts__wrapper {
